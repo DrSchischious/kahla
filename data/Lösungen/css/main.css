@@ -1,0 +1,86 @@
+
+.main {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+table {
+    border: 1px solid black;
+}
+
+ul {
+    list-style: none;
+    
+}
+li {
+    width: 120px;
+    height: 35px;
+}
+
+th {
+    border: 1px solid black;
+    font-size: 24px;
+    height: 50px;
+    width: 160px;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+td.hyper {
+    border: 1px solid black;
+}
+
+td {
+    font-size: 24px;
+    
+}
+
+.twelthLevel {
+    margin-left: 12em;
+}
+
+.eleventhLevel {
+    margin-left: 11em;
+}
+
+.tenthLevel {
+    margin-left: 10em;
+}
+
+.ninthLevel {
+    margin-left: 9em;
+}
+
+.eightLevel {
+    margin-left: 8em;
+}
+
+.seventhLevel {
+    margin-left: 7em;
+}
+
+.sixthLevel {
+    margin-left: 6em;
+}
+
+.fifthLevel {
+    margin-left: 5em;
+}
+
+.fourthLevel {
+    margin-left: 4em;
+}
+
+.thirdLevel {
+    margin-left: 3em;
+}
+
+.secondLevel {
+    margin-left: 2em;
+}
+
+.firstLevel {
+    margin-left: 1em;
+}

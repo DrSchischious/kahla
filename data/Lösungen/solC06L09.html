@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lösung</title>
+		<link href="css/main.css" type="text/css" rel="stylesheet"/>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div class="main">
+			<h1>Deine Lösung</h1>
+			<h2>6. Kapitel</h2>
+			<h2>9. Level</h2>
+			<p><a class="back" href="index.html">Zurück</a></p>
+			<table>
+				<tr>
+					<td>Zeile 1:<br>
+Zeile 2:<br>
+Zeile 3:<br>
+Zeile 4:<br>
+Zeile 5:<br>
+Zeile 6:<br>
+Zeile 7:<br>
+Zeile 8:<br>
+Zeile 9:<br>
+Zeile 10:<br>
+Zeile 11:<br>
+Zeile 12:<br>
+Zeile 13:<br>
+Zeile 14:<br>
+Zeile 15:<br>
+Zeile 16:<br>
+Zeile 17:<br>
+Zeile 18:<br>
+Zeile 19:<br>
+Zeile 20:<br>
+Zeile 21:<br>
+Zeile 22:<br>
+Zeile 23:<br>
+Zeile 24:<br>
+Zeile 25:<br>
+Zeile 26:<br>
+Zeile 27:<br>
+Zeile 28:<br>
+Zeile 29:<br>
+Zeile 30:<br>
+Zeile 31:<br>
+Zeile 32:<br>
+Zeile 33:<br>
+Zeile 34:<br>
+Zeile 35:<br>
+Zeile 36:<br>
+Zeile 37:<br>
+Zeile 38:<br>
+Zeile 39:<br>
+Zeile 40:<br>
+Zeile 41:<br>
+Zeile 42:<br>
+Zeile 43:<br>
+Zeile 44:<br>
+Zeile 45:<br>
+Zeile 46:<br>
+Zeile 47:<br>
+Zeile 48:<br>
+Zeile 49:<br>
+Zeile 50:<br>
+Zeile 51:<br>
+Zeile 52:<br>
+Zeile 53:<br>
+Zeile 54:<br>
+Zeile 55:<br>
+Zeile 56:<br>
+Zeile 57:<br>
+Zeile 58:<br>
+Zeile 59:<br>
+Zeile 60:<br>
+Zeile 61:<br>
+Zeile 62:<br>
+Zeile 63:<br>
+Zeile 64:<br>
+Zeile 65:<br>
+Zeile 66:<br>
+Zeile 67:<br>
+Zeile 68:<br>
+Zeile 69:<br>
+Zeile 70:<br>
+Zeile 71:<br>
+Zeile 72:<br>
+Zeile 73:<br>
+Zeile 74:<br>
+Zeile 75:<br>
+Zeile 76:<br>
+Zeile 77:<br>
+Zeile 78:<br>
+Zeile 79:<br>
+Zeile 80:<br>
+Zeile 81:<br>
+Zeile 82:<br>
+Zeile 83:<br>
+Zeile 84:<br>
+Zeile 85:<br>
+Zeile 86:<br>
+Zeile 87:<br>
+Zeile 88:<br>
+Zeile 89:<br>
+Zeile 90:<br>
+Zeile 91:<br>
+Zeile 92:<br>
+Zeile 93:<br>
+Zeile 94:<br>
+Zeile 95:<br>
+Zeile 96:<br>
+Zeile 97:<br>
+Zeile 98:<br>
+Zeile 99:<br>
+Zeile 100:<br>
+Zeile 101:<br>
+Zeile 102:<br>
+Zeile 103:<br>
+Zeile 104:<br>
+Zeile 105:<br>
+Zeile 106:<br>
+Zeile 107:<br>
+Zeile 108:<br>
+Zeile 109:<br>
+Zeile 110:<br>
+Zeile 111:<br>
+Zeile 112:<br>
+Zeile 113:<br>
+Zeile 114:<br>
+Zeile 115:<br>
+Zeile 116:<br>
+Zeile 117:<br>
+Zeile 118:<br>
+Zeile 119:<br>
+Zeile 120:<br>
+Zeile 121:<br>
+Zeile 122:<br>
+Zeile 123:<br>
+Zeile 124:<br>
+Zeile 125:<br>
+Zeile 126:<br>
+Zeile 127:<br>
+Zeile 128:<br>
+Zeile 129:<br>
+Zeile 130:<br>
+Zeile 131:<br>
+Zeile 132:<br>
+Zeile 133:<br>
+Zeile 134:<br>
+Zeile 135:<br>
+Zeile 136:<br>
+Zeile 137:<br>
+</td>
+					<td><span class="firstLevel">public void kugelRechts() {</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="secondLevel">schritt();</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void kugelLinks() {</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="secondLevel">schritt();</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public boolean istAKleinerAlsB() {</span><br>
+<span class="secondLevel">merkeWert();</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">if (istWertKleiner()) {</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">return true;</span><br>
+<span class="secondLevel">} else {</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">return false;</span><br>
+<span class="secondLevel">}</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public boolean istAKleinerAlsC() {</span><br>
+<span class="secondLevel">merkeWert();</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">if (istWertKleiner()) {</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">return true;</span><br>
+<span class="secondLevel">} else {</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">return false;</span><br>
+<span class="secondLevel">}</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public boolean istBKleinerAlsC() {</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">merkeWert();</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">if (istWertKleiner()) {</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">return true;</span><br>
+<span class="secondLevel">} else {</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">kugelLinks();</span><br>
+<span class="thirdLevel">return false;</span><br>
+<span class="secondLevel">}</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void kugelTausch() {</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="secondLevel">hinlegen();</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="secondLevel">nehmen();</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="secondLevel">hinlegen();</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="secondLevel">nehmen();</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="secondLevel">hinlegen();</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="secondLevel">nehmen();</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void tauschAmitB() {</span><br>
+<span class="secondLevel">nehmen();</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">kugelTausch();</span><br>
+<span class="secondLevel">kugelLinks();</span><br>
+<span class="secondLevel">hinlegen();</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void tauschAmitC() {</span><br>
+<span class="secondLevel">nehmen();</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">kugelTausch();</span><br>
+<span class="secondLevel">kugelLinks();</span><br>
+<span class="secondLevel">kugelLinks();</span><br>
+<span class="secondLevel">hinlegen();</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void tauschBmitC() {</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">nehmen();</span><br>
+<span class="secondLevel">kugelRechts();</span><br>
+<span class="secondLevel">kugelTausch();</span><br>
+<span class="secondLevel">kugelLinks();</span><br>
+<span class="secondLevel">hinlegen();</span><br>
+<span class="secondLevel">//Zurück zu A</span><br>
+<span class="secondLevel">kugelLinks();</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void code() {</span><br>
+<span class="secondLevel">//Unter dieser Zeile sollen deine Befehle stehen</span><br>
+<span class="secondLevel">if (istAKleinerAlsB()) {</span><br>
+<span class="thirdLevel">//A < B</span><br>
+<span class="thirdLevel">System.out.println("A < B");</span><br>
+<span class="thirdLevel">if (istAKleinerAlsC()) {</span><br>
+<span class="fourthLevel">//A < C     A < B</span><br>
+<span class="fourthLevel">System.out.println("A < C");</span><br>
+<span class="fourthLevel">if (istBKleinerAlsC()) {</span><br>
+<span class="fifthLevel">//A < B < C</span><br>
+<span class="fifthLevel">//Alles passt</span><br>
+<span class="fifthLevel">System.out.println("A < B < C");</span><br>
+<span class="fourthLevel">} else {</span><br>
+<span class="fifthLevel">//A < C < B</span><br>
+<span class="fifthLevel">System.out.println("A < C < B");</span><br>
+<span class="fifthLevel">tauschBmitC();</span><br>
+<span class="fourthLevel">}</span><br>
+<span class="thirdLevel">} else {</span><br>
+<span class="fourthLevel">//C < A < B</span><br>
+<span class="fourthLevel">System.out.println("C < A < B");</span><br>
+<span class="fourthLevel">tauschAmitC();</span><br>
+<span class="fourthLevel">tauschBmitC();</span><br>
+<span class="thirdLevel">}</span><br>
+<span class="secondLevel">} else {</span><br>
+<span class="thirdLevel">//B < A</span><br>
+<span class="thirdLevel">System.out.println("B < A");</span><br>
+<span class="thirdLevel">if (istBKleinerAlsC()) {</span><br>
+<span class="thirdLevel">System.out.println("B < C");</span><br>
+<span class="fourthLevel">if (istAKleinerAlsC()) {</span><br>
+<span class="fifthLevel">//B < A < C</span><br>
+<span class="fifthLevel">System.out.println("B < A < C");</span><br>
+<span class="fifthLevel">tauschAmitB();</span><br>
+<span class="fourthLevel">} else {</span><br>
+<span class="fifthLevel">//B < C < A</span><br>
+<span class="fifthLevel">System.out.println("B < C < A");</span><br>
+<span class="fifthLevel">tauschAmitB();</span><br>
+<span class="fifthLevel">tauschBmitC();</span><br>
+<span class="fourthLevel">}</span><br>
+<span class="thirdLevel">} else {</span><br>
+<span class="fourthLevel">//C < B < A</span><br>
+<span class="fourthLevel">System.out.println("C < B < A");</span><br>
+<span class="fourthLevel">tauschAmitC();</span><br>
+<span class="thirdLevel">}</span><br>
+<span class="secondLevel">}</span><br>
+<span class="secondLevel">//Über dieser Zeile sollen deine Befehle stehen</span><br>
+<span class="firstLevel">}</span><br>
+</td>
+				</tr>
+			</table>
+			<p class="loc">Lines of Code (LoC): 124</p>
+			<p><a class="back" href="index.html">Zurück</a></p>
+		</div>
+	</body>
+</html>

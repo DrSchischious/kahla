@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Level
+comment1.params=
+comment1.target=Level()
+comment1.text=\r\n\ \ \ \ Spieler[]\ players;\r\n\ \ \ \ String[][]\ texts;\r\n\ \ \ \ String\ winningMessage;\r\n\ \ \ \ \r\n\ \ \ \ Checkpoint[]\ checkpoints;\r\n\ \ \ \ Item[]\ items;\r\n\ \ \ \ Target[]\ targets;\r\n\ \ \ \ \r\n\ \ \ \ Sphere[]\ spheres;\r\n\ \ \ \ Platform[]\ platforms;\r\n\ \ \ \ \r\n\ \ \ \ Wall[]\ walls;\r\n
+comment2.params=
+comment2.target=boolean\ loadCharacter()
+comment3.params=
+comment3.target=void\ level1()
+comment4.params=
+comment4.target=void\ exportLevel()
+comment5.params=
+comment5.target=Level\ importLevel()
+numComments=6

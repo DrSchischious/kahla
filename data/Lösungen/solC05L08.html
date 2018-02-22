@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lösung</title>
+		<link href="css/main.css" type="text/css" rel="stylesheet"/>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div class="main">
+			<h1>Deine Lösung</h1>
+			<h2>5. Kapitel</h2>
+			<h2>8. Level</h2>
+			<p><a class="back" href="index.html">Zurück</a></p>
+			<table>
+				<tr>
+					<td>Zeile 1:<br>
+Zeile 2:<br>
+Zeile 3:<br>
+Zeile 4:<br>
+Zeile 5:<br>
+Zeile 6:<br>
+Zeile 7:<br>
+Zeile 8:<br>
+Zeile 9:<br>
+Zeile 10:<br>
+Zeile 11:<br>
+Zeile 12:<br>
+Zeile 13:<br>
+Zeile 14:<br>
+Zeile 15:<br>
+Zeile 16:<br>
+Zeile 17:<br>
+Zeile 18:<br>
+Zeile 19:<br>
+Zeile 20:<br>
+Zeile 21:<br>
+Zeile 22:<br>
+Zeile 23:<br>
+Zeile 24:<br>
+Zeile 25:<br>
+Zeile 26:<br>
+Zeile 27:<br>
+Zeile 28:<br>
+Zeile 29:<br>
+Zeile 30:<br>
+Zeile 31:<br>
+Zeile 32:<br>
+Zeile 33:<br>
+Zeile 34:<br>
+Zeile 35:<br>
+Zeile 36:<br>
+Zeile 37:<br>
+Zeile 38:<br>
+Zeile 39:<br>
+Zeile 40:<br>
+Zeile 41:<br>
+Zeile 42:<br>
+Zeile 43:<br>
+Zeile 44:<br>
+Zeile 45:<br>
+Zeile 46:<br>
+Zeile 47:<br>
+Zeile 48:<br>
+Zeile 49:<br>
+Zeile 50:<br>
+Zeile 51:<br>
+Zeile 52:<br>
+Zeile 53:<br>
+Zeile 54:<br>
+Zeile 55:<br>
+Zeile 56:<br>
+Zeile 57:<br>
+Zeile 58:<br>
+Zeile 59:<br>
+Zeile 60:<br>
+Zeile 61:<br>
+Zeile 62:<br>
+Zeile 63:<br>
+Zeile 64:<br>
+</td>
+					<td><span class="firstLevel">public boolean rechtsFrei() {</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="secondLevel">if (istVorWand()) {</span><br>
+<span class="thirdLevel">linksDrehen();</span><br>
+<span class="thirdLevel">return false;</span><br>
+<span class="secondLevel">} else {</span><br>
+<span class="thirdLevel">linksDrehen();</span><br>
+<span class="thirdLevel">return true;</span><br>
+<span class="secondLevel">}</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public boolean linksFrei() {</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="secondLevel">if (istVorWand()) {</span><br>
+<span class="thirdLevel">rechtsDrehen();</span><br>
+<span class="thirdLevel">return false;</span><br>
+<span class="secondLevel">} else {</span><br>
+<span class="thirdLevel">rechtsDrehen();</span><br>
+<span class="thirdLevel">return true;</span><br>
+<span class="secondLevel">}</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void laufeVor() {</span><br>
+<span class="secondLevel">while(!istVorWand()) {</span><br>
+<span class="thirdLevel">schritt();</span><br>
+<span class="secondLevel">}</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void laufeRechtsUm() {</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="secondLevel">schritt();</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="secondLevel">schritt();</span><br>
+<span class="secondLevel">while(!linksFrei()) {</span><br>
+<span class="thirdLevel">schritt();</span><br>
+<span class="secondLevel">}</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="secondLevel">schritt();</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void laufeLinksUm() {</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="secondLevel">schritt();</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="secondLevel">schritt();</span><br>
+<span class="secondLevel">while(!rechtsFrei()) {</span><br>
+<span class="thirdLevel">schritt();</span><br>
+<span class="secondLevel">}</span><br>
+<span class="secondLevel">rechtsDrehen();</span><br>
+<span class="secondLevel">schritt();</span><br>
+<span class="secondLevel">linksDrehen();</span><br>
+<span class="firstLevel">}</span><br>
+<span class="firstLevel">public void code() {</span><br>
+<span class="secondLevel">//Unter dieser Zeile sollen deine Befehle stehen</span><br>
+<span class="secondLevel">while (!istAufMarkierung()) {</span><br>
+<span class="thirdLevel">laufeVor();</span><br>
+<span class="thirdLevel">if (!istAufMarkierung()) {</span><br>
+<span class="fourthLevel">laufeLinksUm();</span><br>
+<span class="fourthLevel">laufeVor();</span><br>
+<span class="fourthLevel">if(!istAufMarkierung()) {</span><br>
+<span class="fifthLevel">laufeRechtsUm();</span><br>
+<span class="fourthLevel">}</span><br>
+<span class="thirdLevel">}</span><br>
+<span class="secondLevel">}</span><br>
+<span class="secondLevel">färben();</span><br>
+<span class="secondLevel">//Über dieser Zeile sollen deine Befehle stehen</span><br>
+<span class="firstLevel">}</span><br>
+</td>
+				</tr>
+			</table>
+			<p class="loc">Lines of Code (LoC): 62</p>
+			<p><a class="back" href="index.html">Zurück</a></p>
+		</div>
+	</body>
+</html>
