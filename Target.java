@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.io.Serializable;
 /**
  * Write a description of class Target here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Target extends GameObjects
+public class Target extends GameObjects implements Serializable
 {
     /**
      * Act - do whatever the Target wants to do. This method is called whenever
@@ -21,7 +21,7 @@ public class Target extends GameObjects
     }
     
     public void drawTarget() {
-        int size = this.getWorldOfType(Stage.class).width;
+        
         GreenfootImage bg = new GreenfootImage(60, 60);
         bg.clear();
         bg.setColor(new Color(255,0,0,255));
@@ -32,6 +32,10 @@ public class Target extends GameObjects
         bg.fillOval(20,20,20,20);
         bg.scale(45, 45);
         this.setImage(bg);
+    }
+    
+    public void redraw() {
+        this.drawTarget();
     }
     
     private void putIntoStage() {

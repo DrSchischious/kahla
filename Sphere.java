@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.io.Serializable;
 /**
  * Write a description of class Sphere here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Sphere extends GameObjects
+public class Sphere extends GameObjects implements Serializable
 {
     int value;
     boolean firstAct = true;
@@ -56,6 +56,10 @@ public class Sphere extends GameObjects
         sp.scale(40, 40);
         this.setImage(sp);
         
+    }
+    
+    public void redraw() {
+        this.drawSphere(this.value);
     }
     
     private void putIntoStage() {

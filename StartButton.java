@@ -37,17 +37,17 @@ public class StartButton extends Button
         }
         
         this.stage = this.player[0].getWorldOfType(CampaignLevel.class);
-        
         //different Conditions for different number of players.
         
         if (player.length == 1) {
             if (stage.checkForEndingConditions() && !this.player[0].hasError()) {
                 //WON (SAVE CODE & Save Data & getEXP!)
-                this.mh.next.enable();
-                this.saveState(this.stage.chapter, this.stage.level);
-                this.player[0].outputCode();
-                this.player[0].updateIndex();
-                
+                if (this.stage.chapter > 0) {
+                    this.mh.next.enable();
+                    this.saveState(this.stage.chapter, this.stage.level);
+                    this.player[0].outputCode();
+                    this.player[0].updateIndex();
+                }
                 mh.displayWinningMessage();
             
             } else if (this.player[0].hasError()) {
@@ -60,10 +60,12 @@ public class StartButton extends Button
         } else if (player.length == 2) {
             if (stage.checkForEndingConditions() && !this.player[0].hasError() && !this.player[1].hasError()) {
                 //WON (SAVE CODE & Save Data & getEXP!)
-                this.mh.next.enable();
-                this.saveState(this.stage.chapter, this.stage.level);
-                this.player[0].outputCode();
-                this.player[0].updateIndex();
+                if (this.stage.chapter > 0) {
+                    this.mh.next.enable();
+                    this.saveState(this.stage.chapter, this.stage.level);
+                    this.player[0].outputCode();
+                    this.player[0].updateIndex();
+                }
                 
                 mh.displayWinningMessage();
             
@@ -80,10 +82,12 @@ public class StartButton extends Button
         } else if (player.length == 3) {
             if (stage.checkForEndingConditions() && !this.player[0].hasError() && !this.player[1].hasError() && !this.player[2].hasError()) {
                 //WON (SAVE CODE & Save Data & getEXP!)
-                this.mh.next.enable();
-                this.saveState(this.stage.chapter, this.stage.level);
-                this.player[0].outputCode();
-                this.player[0].updateIndex();
+                if (this.stage.chapter > 0) {
+                    this.mh.next.enable();
+                    this.saveState(this.stage.chapter, this.stage.level);
+                    this.player[0].outputCode();
+                    this.player[0].updateIndex();
+                }
                 mh.displayWinningMessage();
             
             } else if (this.player[0].hasError()) {
@@ -102,10 +106,12 @@ public class StartButton extends Button
         } else if (player.length == 4) {
             if (stage.checkForEndingConditions() && !this.player[0].hasError() && !this.player[1].hasError() && !this.player[2].hasError() && !this.player[3].hasError()) {
                 //WON (SAVE CODE & Save Data & getEXP!)
-                this.mh.next.enable();
-                this.saveState(this.stage.chapter, this.stage.level);
-                this.player[0].outputCode();
-                this.player[0].updateIndex();
+                if (this.stage.chapter > 0) {
+                    this.mh.next.enable();
+                    this.saveState(this.stage.chapter, this.stage.level);
+                    this.player[0].outputCode();
+                    this.player[0].updateIndex();
+                }
                 mh.displayWinningMessage();
             
             } else if (this.player[0].hasError()) {
@@ -127,10 +133,12 @@ public class StartButton extends Button
         } else if (player.length == 5) {
             if (stage.checkForEndingConditions() && !this.player[0].hasError() && !this.player[1].hasError() && !this.player[2].hasError() && !this.player[3].hasError()&& !this.player[4].hasError()) {
                 //WON (SAVE CODE & Save Data & getEXP!)
-                this.mh.next.enable();
-                this.saveState(this.stage.chapter, this.stage.level);
-                this.player[0].outputCode();
-                this.player[0].updateIndex();
+                if (this.stage.chapter > 0) {
+                    this.mh.next.enable();
+                    this.saveState(this.stage.chapter, this.stage.level);
+                    this.player[0].outputCode();
+                    this.player[0].updateIndex();
+                }
                 mh.displayWinningMessage();
             
             } else if (this.player[0].hasError()) {

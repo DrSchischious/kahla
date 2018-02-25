@@ -87,6 +87,13 @@ public class Multiheader extends Header implements Serializable
         this.checkButtons();
     }
     
+    public String[][] getPages() {
+        return this.pages;
+    }
+    
+    public String getWinningMessage() {
+        return this.winningMessage;
+    }
     public void redraw() {
         //Redraw Everything!
         forward.redraw();

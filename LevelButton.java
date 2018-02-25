@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.io.*;
 /**
  * Write a description of class LevelButton here.
  * 
@@ -356,17 +356,73 @@ public class LevelButton extends Button
         
     }
     
+    public void saveLevel(String path) {
+        try {
+            //path?
+            BufferedWriter out = new BufferedWriter(new FileWriter("data/actualLevel.txt"));  
+            out.write(path);
+            out.close();
+            
+        } catch(IOException e) {
+            
+        } 
+    }
+    
+
+    public Level loadCampaignLevel(int chapter, int level) {
+        String path;
+        if (level == 10) {
+            path = "data/Level/c0"+chapter+"l10.lvl";
+        } else {
+            path = "data/Level/c0"+chapter+"l0"+level+".lvl";
+        }
+        this.saveLevel(path);
+
+        
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        Level read = null;
+        
+        try {
+            fis = new FileInputStream(path);
+         
+            ois = new ObjectInputStream(fis);
+          
+            read = (Level)ois.readObject();
+        
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            
+            if (ois != null) {
+                try {
+                    ois.close();
+                } catch(IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        
+        return read;
+    }
+    
     public void action() {
         if (Greenfoot.mouseClicked(this)) {
             if (this.text.equals("   C01L01   ")) {
-                //Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
-                Level lv = CampaignLevel.loadLevelFromData();
-                System.out.println(lv.width);
-                System.out.println(lv.height);
-                
+                Level lv = this.loadCampaignLevel(1,1);
                 Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
             } else if (this.text.equals("   C01L02   ")) {
-                Greenfoot.setWorld(new CampaignLevel(1,2,10,3,50));
+                Level lv = this.loadCampaignLevel(1,2);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,2,10,3,50));
             } else if (this.text.equals("   C01L03   ")) {
                 Greenfoot.setWorld(new CampaignLevel(1,3,10,3,50));
             } else if (this.text.equals("   C01L04   ")) {

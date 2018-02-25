@@ -809,6 +809,15 @@ public class Wall extends Actor implements Serializable
         
     }
     
+    public int getRealX() {
+        return this.getX()/this.getWorldOfType(Stage.class).width;
+    }
+    
+    public int getRealY() {
+        return this.getY()/this.getWorldOfType(Stage.class).width;
+    }
+    
+    
     /**
      * Act - do whatever the Walls wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

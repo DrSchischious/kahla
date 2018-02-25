@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.io.Serializable;
 /**
  * Write a description of class Outline here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Outline extends GameObjects
+public class Outline extends GameObjects implements Serializable
 {
     /**
      * Act - do whatever the Outline wants to do. This method is called whenever
@@ -38,6 +38,10 @@ public class Outline extends GameObjects
             bg.drawRect(4, 4, 42, 42);
         }
         this.setImage(bg);
+    }
+    
+    public void redraw() {
+        this.drawOutline();
     }
     
     private void putIntoStage() {

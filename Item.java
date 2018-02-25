@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.io.Serializable;
 /**
  * Write a description of class Item here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Item extends GameObjects
+public class Item extends GameObjects implements Serializable
 {
     
     private boolean firstAct = true;
@@ -24,7 +24,7 @@ public class Item extends GameObjects
     }
     
     private void drawItem() {
-        int size = this.getWorldOfType(Stage.class).width;
+
         GreenfootImage bg = new GreenfootImage(60, 60);
         bg.clear();
         bg.setColor(new Color(248,185,37,255));
@@ -33,6 +33,10 @@ public class Item extends GameObjects
         bg.drawPolygon(new int[]{10,40,55,25}, new int[]{35,5,20,50}, 4);
         bg.scale(45, 45);
         this.setImage(bg);
+    }
+    
+    public void redraw() {
+        this.drawItem();
     }
     
     public void take() {

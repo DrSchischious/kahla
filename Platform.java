@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.io.Serializable;
 /**
  * Write a description of class Platform here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Platform extends GameObjects
+public class Platform extends GameObjects implements Serializable
 {
     /**
      * Act - do whatever the Platform wants to do. This method is called whenever
@@ -136,6 +136,10 @@ public class Platform extends GameObjects
         sp.scale(50, 50);
         this.setImage(sp);
         
+    }
+    
+    public void redraw() {
+        this.drawPlatform(this.value);
     }
     
     private void putIntoStage() {

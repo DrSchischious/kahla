@@ -26,6 +26,12 @@ public class Level implements Serializable {
     HashMap<Spieler, GamePoint> players;
     HashMap<Wall, GamePoint> walls;
     HashMap<Checkpoint, GamePoint> checkpoints;
+    HashMap<Item, GamePoint> items;
+    HashMap<Target, GamePoint> targets;
+    HashMap<Outline, GamePoint> outlines;
+    HashMap<Sphere, GamePoint> spheres;
+    HashMap<Platform, GamePoint> platforms;
+    
     
     ArrayList<String[]> memos;
     
@@ -54,6 +60,11 @@ public class Level implements Serializable {
         this.players = new HashMap<Spieler, GamePoint>();
         this.walls = new HashMap<Wall, GamePoint>();
         this.checkpoints = new HashMap<Checkpoint, GamePoint>();
+        this.items = new HashMap<Item, GamePoint>();
+        this.targets = new HashMap<Target, GamePoint>();
+        this.outlines = new HashMap<Outline, GamePoint>();
+        this.spheres = new HashMap<Sphere, GamePoint>();
+        this.platforms = new HashMap<Platform, GamePoint>();
         
         this.memos = new ArrayList<String[]>();
         
@@ -85,7 +96,7 @@ public class Level implements Serializable {
         this.width = 10;
         this.height = 3;
         
-        this.players.put(new Spieler(this.loadCharacter()), new GamePoint(4,5));
+        this.players.put(new Spieler(true), new GamePoint(4,5));
         this.playerArchive = new Spieler[this.players.keySet().size()];
         
         int count = 0;
@@ -167,7 +178,7 @@ public class Level implements Serializable {
             fout = new FileOutputStream(path);
             oos = new ObjectOutputStream(fout);
             oos.writeObject(this);
-            System.out.println("Done");
+            CampaignLevel.savePath(path);
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {

@@ -39,15 +39,21 @@ public class Menu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 800, 1); 
-   
+        /*
         Level lv = new Level();
         lv.level1();
         
         lv.exportLevel();
-        
+        */
         this.actualLevel = this.getLevel();
         
         if (this.actualLevel != null) {
+            
+            Level lv = this.reloadLevel(actualLevel);
+                
+            Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+            Greenfoot.start();
+            
             if (this.actualLevel.equals("C01L01")) {
                 Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
                 Greenfoot.start();
@@ -300,18 +306,49 @@ public class Menu extends World
         this.exp = this.getExp(this.progress);
         this.setMode("Main");
         
-      
-        
+
         this.draw();
         this.actualLevel = this.getLevel();
-       
-        
-        
+
         Greenfoot.start();
         
         
     }
     
+    public Level reloadLevel(String path) {
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        Level read = null;
+        
+        try {
+            fis = new FileInputStream(path);
+            
+            ois = new ObjectInputStream(fis);
+          
+            read = (Level)ois.readObject();
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            
+            if (ois != null) {
+                try {
+                    ois.close();
+                } catch(IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        
+        return read;
+    }
     
     public int getLinesOfCode() {
         this.loc = new int[7][10];
@@ -519,6 +556,9 @@ public class Menu extends World
             } else if (this.mode.equals("Hilfe")) {
                 gf = this.drawHelp(gf,0);
                 this.addHelpButtons();
+            } else if (this.mode.equals("Others")) {
+                gf = this.drawOthers(gf);
+                this.addOthersButtons();
             } else if (this.mode.equals("Befehlsliste")) {
                 gf = this.drawHelp(gf,1);
                 this.addLevelOneButtons();
@@ -841,7 +881,7 @@ public class Menu extends World
         return gf;
     }
     
-     public GreenfootImage drawOptions(GreenfootImage gf) {
+    public GreenfootImage drawOptions(GreenfootImage gf) {
         gf.setColor(new Color(255,255,255,255));
         gf.fill();
         gf.setColor(new Color(0,0,0,255));
@@ -852,6 +892,18 @@ public class Menu extends World
         
         gf.drawString("Möchtest du deinen Spielstand zurücksetzen?",20,200);
         gf.drawString("Möchtest du deine Lösungen einsehen?",20,310);
+        
+        return gf;
+    }
+    
+    public GreenfootImage drawOthers(GreenfootImage gf) {
+        // TODO
+        gf.setColor(new Color(255,255,255,255));
+        gf.fill();
+        gf.setColor(new Color(0,0,0,255));
+        gf.setFont(new Font(30));
+        gf.drawString("Weitere Modi", 20, 60);
+        gf.setFont(new Font(25));
         
         return gf;
     }
@@ -1532,6 +1584,8 @@ public class Menu extends World
         this.addObject(this.buttons[15],200,750);
                         
     }
+    
+    
     
     public void addLevelOneButtons() {
         
@@ -2230,6 +2284,20 @@ public class Menu extends World
         this.addObject(this.buttons[5],200,360);
         
     }
+    
+    public void addOthersButtons() {
+        this.buttons[0] = new MenuButton("Back",this);
+        this.addObject(this.buttons[0],500,750);
+        this.buttons[1] = new MenuButton("Level laden", this);
+        this.addObject(this.buttons[1],200,100);
+        this.buttons[2] = new MenuButton("Level-Editor", this);
+        this.addObject(this.buttons[2],200,150);
+        
+        this.buttons[3] = new MenuButton("Multiplayer", this);
+        this.addObject(this.buttons[3],200,200);
+       
+    }
+    
     
     /**
      * Addas a Back-Button to get back to the Main Menu.

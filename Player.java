@@ -149,8 +149,13 @@ public class Player extends Actor implements Serializable
        this.hp = 1;
     }
     
-    public void redraw() {
-        this.drawPlayer(50);
+    public void redraw(boolean kahla) {
+        if (kahla == true) {
+           this.setRandomColorForKahla();
+       } else {
+            this.setRandomColorForFarbi();
+       }
+       this.drawPlayer(50);
     }
     
     public void setRandomColorForKahla() {

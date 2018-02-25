@@ -53,10 +53,12 @@ public class MenuButton extends Button  implements Serializable
                 this.statistics();
 
             } else if (this.text.equals("   Weitere Modi   ")) {
-                //Missing
+                this.others();
             } else if (this.text.equals("   Optionen   ")) {
                 this.options();
 
+            } else if (this.text.equals("   Level laden   ")) {
+                this.loadLevel();
             } else if (this.text.equals("   Befehlsliste   ")) {
                 this.commands(1);
             } else if (this.text.equals("   Befehle   ")) {
@@ -453,6 +455,21 @@ public class MenuButton extends Button  implements Serializable
                 button.drawString(text,67,30);
             } else if (this.text.equals("   Weitere Modi   ")) {
                 button.drawString(text,40,30);
+            } else if (this.text.equals("   Level laden   ")) {
+                button = new GreenfootImage(250,40);
+                button.setFont(new Font(30));
+                button.setColor(new Color(0,0,0,255));
+                button.drawString(text,30,30);
+            } else if (this.text.equals("   Level-Editor   ")) {
+                button = new GreenfootImage(250,40);
+                button.setFont(new Font(30));
+                button.setColor(new Color(0,0,0,255));
+                button.drawString(text,27,30);
+            } else if (this.text.equals("   Multiplayer   ")) {
+                button = new GreenfootImage(250,40);
+                button.setFont(new Font(30));
+                button.setColor(new Color(0,0,0,255));
+                button.drawString(text,32,30);
             } else if (this.text.equals("   Kahla   ") && this.isKahla == false) {
                 button = new GreenfootImage(150,40);
                 button.setFont(new Font(30));
@@ -1345,6 +1362,23 @@ public class MenuButton extends Button  implements Serializable
     public void statistics() {
         //Change Mode in menu
         this.menu.setMode("Statistics");
+    }
+    
+    public void others() {
+        //Change Mode in menu
+        this.menu.setMode("Others");
+    }
+    
+    public void loadLevel() {
+        Level lv = CampaignLevel.loadLevelFromData();
+        try {
+            lv.toString();
+            
+            Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+        } catch(Exception e) {
+            System.out.println("Kein richtiges Level");
+        }
+        
     }
     
     public void main() {
