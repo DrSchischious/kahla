@@ -499,7 +499,20 @@ public class CampaignLevel extends Stage
             HashMap.Entry pair = (HashMap.Entry)it.next();
             boolean kahla = this.loadCharacter();
             ((Player)pair.getKey()).redraw(kahla);           
-            addObject((Spieler)pair.getKey(),this.getRealX(((GamePoint)pair.getValue()).getX()),this.getRealY(((GamePoint)pair.getValue()).getY()));
+            Spieler s = (Spieler)pair.getKey();
+            
+            addObject(s,this.getRealX(((GamePoint)pair.getValue()).getX()),this.getRealY(((GamePoint)pair.getValue()).getY()));
+            
+            
+            if (s.direction == 's') {
+                s.setRotation(90);
+            } else if (s.direction == 'w') {
+                s.setRotation(180);
+            } else if (s.direction == 'n') {
+                s.setRotation(270);
+            } else {
+                s.setRotation(0);
+            }
         }
         
         List<Spieler> sp = this.getObjects(Spieler.class);
@@ -583,7 +596,22 @@ public class CampaignLevel extends Stage
         List<Spieler> sp = this.getObjects(Spieler.class);
         
         for (Spieler s : sp) {
-            lv.players.put(new Spieler(true), new GamePoint(s.getRealX(),s.getRealY()));
+
+            Spieler k = new Spieler(true);
+            
+            
+            if (s.getRotation() == 90) {
+                k.direction = 's';
+            } else if (s.getRotation() == 180) {
+                k.direction = 'w';
+            } else if (s.getRotation() == 270) {
+                k.direction = 'n';
+            } else {
+                k.direction = 'e';
+            }
+            
+            lv.players.put(k, new GamePoint(s.getRealX(),s.getRealY()));
+            
         }
         
         lv.playerArchive = new Spieler[lv.players.keySet().size()];
@@ -747,7 +775,7 @@ public class CampaignLevel extends Stage
         addObject(cp,this.getRealX(5),this.getRealY(5));
         this.isRewritable = false;
         this.isCampaignLevel = true;
-        //this.exportLevel();
+        this.exportLevel();
     }
     
     public void prepareC01L02() {
@@ -822,7 +850,7 @@ public class CampaignLevel extends Stage
         addObject(cp,this.getRealX(7),this.getRealY(5));
         this.isRewritable = false;
         this.isCampaignLevel = true;
-        //this.exportLevel();
+        this.exportLevel();
     }
     
     public void prepareC01L03() {
@@ -891,7 +919,7 @@ public class CampaignLevel extends Stage
         addObject(wall32,this.getRealX(9),this.getRealY(5));
         this.isRewritable = false;
         this.isCampaignLevel = true;     
-        //this.exportLevel();
+        this.exportLevel();
     }
     
     public void prepareC01L04() {
@@ -961,7 +989,7 @@ public class CampaignLevel extends Stage
         addObject(t,this.getRealX(6),this.getRealY(5));
         this.isRewritable = false;
         this.isCampaignLevel = true;     
-        //this.exportLevel();
+        this.exportLevel();
         
         
     }
@@ -1064,7 +1092,7 @@ public class CampaignLevel extends Stage
         addObject(t,this.getRealX(8),this.getRealY(5));
         this.isRewritable = false;
         this.isCampaignLevel = true;     
-        //this.exportLevel();
+        this.exportLevel();
         
         
     }
@@ -1074,7 +1102,7 @@ public class CampaignLevel extends Stage
         Spieler player0 = new Spieler(this.loadCharacter());
         Spieler[] P = new Spieler[]{player0};
         addObject(player0,this.getRealX(5),this.getRealY(7));
-        player0.setRotation(90); 
+        player0.setRotation(270); 
         String[] firstPage = new String[]{"Wie hier kann es sein, dass ein Level","manchmal mehrere Ziele hat.","","Diese gilt es alle in einem Programm zu lösen.","Versuche also beide Checkpoints zu besuchen."};
         String wm = "+10 EXP.\n\nWenn du genügend Erfahrungspunkte hast,\nkannst du einen besonderen\nMultiplayer-Modus freischalten!";
         Multiheader mheader = new Multiheader(new String[][]{firstPage},P,wm);

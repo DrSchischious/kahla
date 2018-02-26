@@ -75,6 +75,8 @@ public class Player extends Actor implements Serializable
     private int wert = 0;
     public int hasChecked = 0;
     
+    public char direction;
+    
     /**
      * Constructor for objects of class Player.
      * It draws a Player according to the cell-size and a given color.
@@ -97,6 +99,7 @@ public class Player extends Actor implements Serializable
       this.orders = new ArrayList<String>();
       this.cheatUnlimitedAmmo();
       this.hp = 1;
+      this.direction = 'e';
     }
     
     /**
@@ -126,6 +129,7 @@ public class Player extends Actor implements Serializable
        this.orders = new ArrayList<String>();
        this.cheatUnlimitedAmmo();
        this.hp = 1;
+       this.direction = 'e';
     }
     
     public Player(boolean kahla) {
@@ -147,6 +151,7 @@ public class Player extends Actor implements Serializable
        this.orders = new ArrayList<String>();
        this.cheatUnlimitedAmmo();
        this.hp = 1;
+       this.direction = 'e';
     }
     
     public void redraw(boolean kahla) {
@@ -697,6 +702,7 @@ public class Player extends Actor implements Serializable
         if (!this.isAnimating()) {
             this.animationRight = true;
         }
+
     }
     
     private boolean isAnimating () {
