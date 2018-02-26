@@ -39,12 +39,7 @@ public class Menu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 800, 1); 
-        /*
-        Level lv = new Level();
-        lv.level1();
         
-        lv.exportLevel();
-        */
         this.actualLevel = this.getLevel();
         
         if (this.actualLevel != null) {
@@ -54,7 +49,7 @@ public class Menu extends World
             Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
             Greenfoot.start();
             
-            if (this.actualLevel.equals("C01L01")) {
+            /*if (this.actualLevel.equals("C01L01")) {
                 Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
                 Greenfoot.start();
                 
@@ -259,7 +254,7 @@ public class Menu extends World
                 
                 
                                 
-            }
+            } */
         } else {
             
             this.buttons = new MenuButton[20];

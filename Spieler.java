@@ -26,13 +26,17 @@ public class Spieler extends Player implements Serializable
     }
     
     //Unter dieser Zeile sollen deine Prozeduren stehen
-    
+    public void doppelschritt() {
+        schritt();
+        schritt();
+    }
     
     //Über dieser Zeile sollen deine Prozeduren stehen
  
     public void code() {
         //Unter dieser Zeile sollen deine Befehle stehen
-        schritt();
+        
+        doppelschritt();
         //Über dieser Zeile sollen deine Befehle stehen
     }
 }

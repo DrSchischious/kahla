@@ -13,7 +13,7 @@ import java.io.*;
  */
 public class StartButton extends Button
 {
-    Spieler[] player;
+    Player[] player;
     CampaignLevel stage;
     Multiheader mh;
 
@@ -23,6 +23,12 @@ public class StartButton extends Button
      */
     
     public StartButton(Spieler[] a, Multiheader h) {
+        super("Starte Code");
+        this.player = a;
+        this.mh = h;
+    }
+    
+    public StartButton(Player[] a, Multiheader h) {
         super("Starte Code");
         this.player = a;
         this.mh = h;

@@ -52,28 +52,49 @@ public class Multiheader extends Header implements Serializable
 
     
     public Multiheader(String[][] pages, Spieler[] a, String wm) {
-        
-        
-        
+
         this.numberOfPages = pages.length;
         this.pages = pages;
-        
-        
+  
         this.forward = new PageButton(this,">",true);
         this.backward = new PageButton(this,"<",false);
-        
-        
-        
+
         this.forward.enable();
         this.backward.disable();
-        
         this.start = new StartButton(a,this);
         //if (this.page == this.numberOfPages) { NUR Aktivieren, wenn Lösung für ständiges zurückgehen?
         this.start.enable();
         //}
+
+        this.next = new NextButton();
+        this.next.disable();
         
+        this.winningMessage = wm;
+       
+        this.back = new BackButton();
         
+        this.commands = new CommandButton();
         
+        this.page = this.loadPage();
+        this.checkButtons();
+    }
+    
+    public Multiheader(String[][] pages, Player[] a, String wm) {
+
+        this.numberOfPages = pages.length;
+        this.pages = pages;
+  
+        this.forward = new PageButton(this,">",true);
+        this.backward = new PageButton(this,"<",false);
+
+        this.forward.enable();
+        this.backward.disable();
+       
+        this.start = new StartButton(a,this);
+        //if (this.page == this.numberOfPages) { NUR Aktivieren, wenn Lösung für ständiges zurückgehen?
+        this.start.enable();
+        //}
+
         this.next = new NextButton();
         this.next.disable();
         

@@ -416,131 +416,245 @@ public class LevelButton extends Button
     public void action() {
         if (Greenfoot.mouseClicked(this)) {
             if (this.text.equals("   C01L01   ")) {
-                /*Level lv = this.loadCampaignLevel(1,1);
-                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));*/
-                Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
+                Level lv = this.loadCampaignLevel(1,1);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
             } else if (this.text.equals("   C01L02   ")) {
-                /*Level lv = this.loadCampaignLevel(1,2);
-                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));*/
-                Greenfoot.setWorld(new CampaignLevel(1,2,10,3,50));
+                Level lv = this.loadCampaignLevel(1,2);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,2,10,3,50));
             } else if (this.text.equals("   C01L03   ")) {
-                Greenfoot.setWorld(new CampaignLevel(1,3,10,3,50));
+                Level lv = this.loadCampaignLevel(1,3);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,3,10,3,50));
             } else if (this.text.equals("   C01L04   ")) {
-                Greenfoot.setWorld(new CampaignLevel(1,4,10,3,50));
+                Level lv = this.loadCampaignLevel(1,4);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,4,10,3,50));
             } else if (this.text.equals("   C01L05   ")) {
-                Greenfoot.setWorld(new CampaignLevel(1,5,10,4,50));
+                Level lv = this.loadCampaignLevel(1,5);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,5,10,4,50));
             } else if (this.text.equals("   C01L06   ")) {
-                Greenfoot.setWorld(new CampaignLevel(1,6,11,6,50));
+                Level lv = this.loadCampaignLevel(1,6);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,6,11,6,50));
             } else if (this.text.equals("   C01L07   ")) {
-                Greenfoot.setWorld(new CampaignLevel(1,7,11,7,50));
+                Level lv = this.loadCampaignLevel(1,7);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,7,11,7,50));
             } else if (this.text.equals("   C01L08   ")) {
-                Greenfoot.setWorld(new CampaignLevel(1,8,10,4,50));
+                Level lv = this.loadCampaignLevel(1,8);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,8,10,4,50));
             } else if (this.text.equals("   C01L09   ")) {
-                Greenfoot.setWorld(new CampaignLevel(1,9,11,5,50));
+                Level lv = this.loadCampaignLevel(1,9);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,9,11,5,50));
             } else if (this.text.equals("   C01L10   ")) {
-                Greenfoot.setWorld(new CampaignLevel(1,10,10,7,50));
+                Level lv = this.loadCampaignLevel(1,10);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(1,10,10,7,50));
             } else if (this.text.equals("   C02L01   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,1,11,3,50));
-                
+                Level lv = this.loadCampaignLevel(2,1);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,1,11,3,50));
             } else if (this.text.equals("   C02L02   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,2,11,7,50));
+                Level lv = this.loadCampaignLevel(2,2);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,2,11,7,50));
             } else if (this.text.equals("   C02L03   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,3,9,5,50));
+                Level lv = this.loadCampaignLevel(2,3);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,3,9,5,50));
             } else if (this.text.equals("   C02L04   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,4,11,7,50));
+                Level lv = this.loadCampaignLevel(2,4);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,4,11,7,50));
             } else if (this.text.equals("   C02L05   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,5,11,6,50));
+                Level lv = this.loadCampaignLevel(2,5);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,5,11,6,50));
             } else if (this.text.equals("   C02L06   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,6,10,5,50));
+                Level lv = this.loadCampaignLevel(2,6);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,6,10,5,50));
             } else if (this.text.equals("   C02L07   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,7,12,7,50));
+                Level lv = this.loadCampaignLevel(2,7);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,7,12,7,50));
             } else if (this.text.equals("   C02L08   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,8,13,8,50));
+                Level lv = this.loadCampaignLevel(2,8);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,8,13,8,50));
             } else if (this.text.equals("   C02L09   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,9,13,13,50));
+                Level lv = this.loadCampaignLevel(2,9);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,9,13,13,50));
             } else if (this.text.equals("   C02L10   ")) {
-                Greenfoot.setWorld(new CampaignLevel(2,10,17,8,50));
+                Level lv = this.loadCampaignLevel(2,10);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(2,10,17,8,50));
             } else if (this.text.equals("   C03L01   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,1,11,3,50));
-                
+                Level lv = this.loadCampaignLevel(3,1);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,1,11,3,50));
             } else if (this.text.equals("   C03L02   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,2,10,5,50));
+                Level lv = this.loadCampaignLevel(3,2);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,2,10,5,50));
             } else if (this.text.equals("   C03L03   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,3,11,5,50));
+                Level lv = this.loadCampaignLevel(3,3);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,3,11,5,50));
             } else if (this.text.equals("   C03L04   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,4,11,5,50));
+                Level lv = this.loadCampaignLevel(3,4);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,4,11,5,50));
             } else if (this.text.equals("   C03L05   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,5,9,5,50));
+                Level lv = this.loadCampaignLevel(3,5);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,5,9,5,50));
             } else if (this.text.equals("   C03L06   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,6,11,8,50));
+                Level lv = this.loadCampaignLevel(3,6);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,6,11,8,50));
             } else if (this.text.equals("   C03L07   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,7,9,5,50));
+                Level lv = this.loadCampaignLevel(3,7);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,7,9,5,50));
             } else if (this.text.equals("   C03L08   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,8,13,7,50));
+                Level lv = this.loadCampaignLevel(3,8);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,8,13,7,50));
             } else if (this.text.equals("   C03L09   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,9,11,7,50));
+                Level lv = this.loadCampaignLevel(3,9);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,9,11,7,50));
             } else if (this.text.equals("   C03L10   ")) {
-                Greenfoot.setWorld(new CampaignLevel(3,10,11,5,50));
+                Level lv = this.loadCampaignLevel(3,10);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(3,10,11,5,50));
             } else if (this.text.equals("   C04L01   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,1,10,9,50));
+                Level lv = this.loadCampaignLevel(4,1);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,1,10,9,50));
             } else if (this.text.equals("   C04L02   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,2,9,7,50));
+                Level lv = this.loadCampaignLevel(4,2);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,2,9,7,50));
             } else if (this.text.equals("   C04L03   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,3,9,8,50));
+                Level lv = this.loadCampaignLevel(4,3);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,3,9,8,50));
             } else if (this.text.equals("   C04L04   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,4,9,9,50));
+                Level lv = this.loadCampaignLevel(4,4);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,4,9,9,50));
             } else if (this.text.equals("   C04L05   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,5,11,12,50));
+                Level lv = this.loadCampaignLevel(4,5);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,5,11,12,50));
             } else if (this.text.equals("   C04L06   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,6,13,9,50));
+                Level lv = this.loadCampaignLevel(4,6);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,6,13,9,50));
             } else if (this.text.equals("   C04L07   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,7,12,9,50));
+                Level lv = this.loadCampaignLevel(4,7);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,7,12,9,50));
             } else if (this.text.equals("   C04L08   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,8,11,11,50));
+                Level lv = this.loadCampaignLevel(4,8);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,8,11,11,50));
             } else if (this.text.equals("   C04L09   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,9,12,9,50));
+                Level lv = this.loadCampaignLevel(4,9);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,9,12,9,50));
             } else if (this.text.equals("   C04L10   ")) {
-                Greenfoot.setWorld(new CampaignLevel(4,10,11,11,50));
+                Level lv = this.loadCampaignLevel(4,10);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(4,10,11,11,50));
             } else if (this.text.equals("   C05L01   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,1,9,3,50));
+                Level lv = this.loadCampaignLevel(5,1);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,1,9,3,50));
             } else if (this.text.equals("   C05L02   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,2,9,9,50));
+                Level lv = this.loadCampaignLevel(5,2);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,2,9,9,50));
             } else if (this.text.equals("   C05L03   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,3,9,9,50));
+                Level lv = this.loadCampaignLevel(5,3);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,3,9,9,50));
             } else if (this.text.equals("   C05L04   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,4,10,13,50));
+                Level lv = this.loadCampaignLevel(5,4);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,4,10,13,50));
             } else if (this.text.equals("   C05L05   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,5,11,10,50));
+                Level lv = this.loadCampaignLevel(5,5);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,5,11,10,50));
             } else if (this.text.equals("   C05L06   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,6,10,7,50));
+                Level lv = this.loadCampaignLevel(5,6);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,6,10,7,50));
             } else if (this.text.equals("   C05L07   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,7,9,11,50));
+                Level lv = this.loadCampaignLevel(5,7);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,7,9,11,50));
             } else if (this.text.equals("   C05L08   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,8,13,9,50));
+                Level lv = this.loadCampaignLevel(5,8);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,8,13,9,50));
             } else if (this.text.equals("   C05L09   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,9,13,13,50));
+                Level lv = this.loadCampaignLevel(5,9);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,9,13,13,50));
             } else if (this.text.equals("   C05L10   ")) {
-                Greenfoot.setWorld(new CampaignLevel(5,10,13,13,50));
+                Level lv = this.loadCampaignLevel(5,10);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(5,10,13,13,50));
             } else if (this.text.equals("   C06L01   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,1,13,6,50));
+                Level lv = this.loadCampaignLevel(6,1);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,1,13,6,50));
             } else if (this.text.equals("   C06L02   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,2,13,7,50));
+                Level lv = this.loadCampaignLevel(6,2);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,2,13,7,50));
             } else if (this.text.equals("   C06L03   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,3,13,11,50));
+                Level lv = this.loadCampaignLevel(6,3);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,3,13,11,50));
             } else if (this.text.equals("   C06L04   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,4,13,11,50));
+                Level lv = this.loadCampaignLevel(6,4);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,4,13,11,50));
             } else if (this.text.equals("   C06L05   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,5,15,11,50));
+                Level lv = this.loadCampaignLevel(6,5);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,5,15,11,50));
             } else if (this.text.equals("   C06L06   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,6,15,11,50));
+                Level lv = this.loadCampaignLevel(6,6);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,6,15,11,50));
             } else if (this.text.equals("   C06L07   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,7,12,7,50));
+                Level lv = this.loadCampaignLevel(6,7);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,7,12,7,50));
             } else if (this.text.equals("   C06L08   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,8,12,7,50));
+                Level lv = this.loadCampaignLevel(6,8);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,8,12,7,50));
             } else if (this.text.equals("   C06L09   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,9,13,7,50));
+                Level lv = this.loadCampaignLevel(6,9);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,9,13,7,50));
             } else if (this.text.equals("   C06L10   ")) {
-                Greenfoot.setWorld(new CampaignLevel(6,10,13,7,50));
+                Level lv = this.loadCampaignLevel(6,10);
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                //Greenfoot.setWorld(new CampaignLevel(6,10,13,7,50));
             }
             //Update with new Level
         }

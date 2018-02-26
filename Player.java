@@ -3383,5 +3383,9 @@ public class Player extends Actor implements Serializable
         return true;
     }
     
+    public void code() {
+        
+    }
+    
 
 }

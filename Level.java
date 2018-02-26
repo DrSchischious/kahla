@@ -23,7 +23,7 @@ public class Level implements Serializable {
     int width;
     int height;
     
-    HashMap<Spieler, GamePoint> players;
+    HashMap<Player, GamePoint> players;
     HashMap<Wall, GamePoint> walls;
     HashMap<Checkpoint, GamePoint> checkpoints;
     HashMap<Item, GamePoint> items;
@@ -36,7 +36,7 @@ public class Level implements Serializable {
     ArrayList<String[]> memos;
     
     String[][] memoArchive;
-    Spieler[] playerArchive;
+    Player[] playerArchive;
     Multiheader mh;
 
     String winningMessage;
@@ -57,7 +57,7 @@ public class Level implements Serializable {
     
     
     public Level() {
-        this.players = new HashMap<Spieler, GamePoint>();
+        this.players = new HashMap<Player, GamePoint>();
         this.walls = new HashMap<Wall, GamePoint>();
         this.checkpoints = new HashMap<Checkpoint, GamePoint>();
         this.items = new HashMap<Item, GamePoint>();
@@ -96,8 +96,8 @@ public class Level implements Serializable {
         this.width = 10;
         this.height = 3;
         
-        this.players.put(new Spieler(true), new GamePoint(4,5));
-        this.playerArchive = new Spieler[this.players.keySet().size()];
+        this.players.put(new Player(true), new GamePoint(4,5));
+        this.playerArchive = new Player[this.players.keySet().size()];
         
         int count = 0;
         Iterator it = this.players.entrySet().iterator();
