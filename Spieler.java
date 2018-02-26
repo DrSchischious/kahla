@@ -35,8 +35,7 @@ public class Spieler extends Player implements Serializable
  
     public void code() {
         //Unter dieser Zeile sollen deine Befehle stehen
-        
-        doppelschritt();
+        schritt();
         //Über dieser Zeile sollen deine Befehle stehen
     }
 }

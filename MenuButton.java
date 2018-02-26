@@ -39,6 +39,49 @@ public class MenuButton extends Button  implements Serializable
         
     }
     
+    public Level reset() {
+        String path = "";
+        try {
+           BufferedReader in = new BufferedReader(new FileReader("data/actualLevel.txt"));
+           path =  in.readLine();
+        } catch(IOException e) {
+           path = "";
+        } 
+        
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        Level read = null;
+        
+        try {
+            fis = new FileInputStream(path);
+
+            ois = new ObjectInputStream(fis);
+
+            read = (Level)ois.readObject();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            
+            if (ois != null) {
+                try {
+                    ois.close();
+                } catch(IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        
+        return read;
+    }
+    
     
     
     public void action() {
@@ -193,7 +236,11 @@ public class MenuButton extends Button  implements Serializable
 
             }  else if (this.text.equals("    Back    ")) {
               
-                String actualLevel = this.getLevel();
+                //String actualLevel = this.getLevel();
+                Level lv = this.reset();
+                Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
+                Greenfoot.start();
+                /*
                 if (actualLevel.equals("C01L01")) {
                     Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
                     Greenfoot.start();
@@ -377,6 +424,7 @@ public class MenuButton extends Button  implements Serializable
                     Greenfoot.start();
                 }
                         
+                */
                 
                 
                 

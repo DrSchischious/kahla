@@ -490,8 +490,13 @@ public class CampaignLevel extends Stage
     }
     
     public void createLevelFromFile(Level lvl) {
-        Spieler[] sptemp;
+        this.chapter = lvl.chapter;
+        this.level = lvl.level;
+        this.isRewritable = lvl.isRewritable;
+        this.isCampaignLevel = lvl.isCampaignLevel;
         
+        Spieler[] sptemp;
+
         Iterator it = lvl.players.entrySet().iterator();
 
         while (it.hasNext()) {
@@ -579,9 +584,7 @@ public class CampaignLevel extends Stage
             ((Platform)pair.getKey()).redraw();
             addObject((Platform)pair.getKey(),this.getRealX(((GamePoint)pair.getValue()).getX()),this.getRealY(((GamePoint)pair.getValue()).getY()));
         }
-        
-        
-        //TODO -> ResetStage with a path(?)
+      
     }
     
     public void exportLevel() {
@@ -589,6 +592,11 @@ public class CampaignLevel extends Stage
         Level lv = new Level();
         lv.width = this.getWidth()/50;
         lv.height = (this.getHeight()/50)-4;
+        
+        lv.chapter = this.chapter;
+        lv.level = this.level;
+        lv.isRewritable = this.isRewritable;
+        lv.isCampaignLevel = this.isCampaignLevel;
         
         //Spieler
          
@@ -774,6 +782,8 @@ public class CampaignLevel extends Stage
         addObject(cp,this.getRealX(5),this.getRealY(5));
         this.isRewritable = false;
         this.isCampaignLevel = true;
+        this.chapter = 1;
+        this.level = 1;
         //this.exportLevel();
     }
     
@@ -918,7 +928,7 @@ public class CampaignLevel extends Stage
         addObject(wall32,this.getRealX(9),this.getRealY(5));
         this.isRewritable = false;
         this.isCampaignLevel = true;     
-        //this.exportLevel();
+        this.exportLevel();
     }
     
     public void prepareC01L04() {

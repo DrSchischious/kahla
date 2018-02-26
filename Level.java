@@ -38,24 +38,15 @@ public class Level implements Serializable {
     String[][] memoArchive;
     Player[] playerArchive;
     Multiheader mh;
+    
+    int chapter;
+    int level;
+    
+    boolean isRewritable;
+    boolean isCampaignLevel;
 
     String winningMessage;
-    /*
-    Spieler[] players;
-    String[][] texts;
-    String winningMessage;
-    
-    Checkpoint[] checkpoints;
-    Item[] items;
-    Target[] targets;
-    
-    Sphere[] spheres;
-    Platform[] platforms;
-    
-    Wall[] walls;
-    */
-    
-    
+   
     public Level() {
         this.players = new HashMap<Player, GamePoint>();
         this.walls = new HashMap<Wall, GamePoint>();
@@ -65,9 +56,11 @@ public class Level implements Serializable {
         this.outlines = new HashMap<Outline, GamePoint>();
         this.spheres = new HashMap<Sphere, GamePoint>();
         this.platforms = new HashMap<Platform, GamePoint>();
-        
         this.memos = new ArrayList<String[]>();
-        
+        this.chapter = 0;
+        this.level = 0;
+        this.isRewritable = true;
+        this.isCampaignLevel = false;
     }
     
     public boolean loadCharacter() {
@@ -90,69 +83,6 @@ public class Level implements Serializable {
         
         
         return true;
-    }
-    
-    public void level1() {
-        this.width = 10;
-        this.height = 3;
-        
-        this.players.put(new Player(true), new GamePoint(4,5));
-        this.playerArchive = new Player[this.players.keySet().size()];
-        
-        int count = 0;
-        Iterator it = this.players.entrySet().iterator();
-        while (it.hasNext()) {
-            HashMap.Entry pair = (HashMap.Entry)it.next();
-            this.playerArchive[count] = (Spieler)pair.getKey();
-            count++;
-        }
-        
-        this.memos.add(new String[]{"Willkommen bei \"Java mit Kahla\"", "Gegeben ist das unten zu sehende Spielfeld.","","Klicke hier unten auf den Pfeil für weitere","Informationen."});
-        this.memos.add(new String[]{"Gut!","","Der kleine Kreis mit der Spitze ist deine","Spielfigur."});
-        this.memos.add(new String[]{"Die Spitze deutet die Richtung an,","in die deine Spielfigur gedreht ist."});
-        this.memos.add(new String[]{"Die grauen Bereiche deuten Wände","an. Deine Spielfigur kann diese nicht","begehen."});
-        this.memos.add(new String[]{"Der türkise Kreis ist ein Checkpoint!","","Ziel dieses Levels ist es, deine Spielfigur","mit bestimmten Befehlen zum Checkpoint", "zu führen."});
-        this.memos.add(new String[]{"Suche dazu auf der rechten Seite","das Element 'Spieler' und klicke doppelt","darauf."});
-        this.memos.add(new String[]{"Du befindest dich nun im Editor.","Hier kannst du nun nach dem Befehl", "'public void code()' suchen.",""});
-        this.memos.add(new String[]{"Innerhalb des Bereiches kannst du","Befehle formulieren.","","Probiere es doch mal mit dem Befehl","'schritt();'",""});
-        this.memos.add(new String[]{"Führe dann die Befehle über den","Button 'Starte Code' aus"});
-        this.memoArchive = new String[this.memos.size()][];
-        
-        count = 0;
-        for (String[] s : this.memos) {
-            this.memoArchive[count] = s;
-            count++;
-        }
-        
-        this.winningMessage = "Sehr gut!\nDu kannst nun das nächste Level über\nden Button 'Nächstes Level' erreichen.";
-        
-        this.mh = new Multiheader(this.memoArchive,this.playerArchive,this.winningMessage);
-        
-        this.walls.put(new Wall("FNH"), new GamePoint(1,4));
-        this.walls.put(new Wall("FNH"), new GamePoint(2,4));
-        this.walls.put(new Wall("FNH"), new GamePoint(3,4));
-        this.walls.put(new Wall("FNH"), new GamePoint(4,4));
-        this.walls.put(new Wall("FNH"), new GamePoint(5,4));
-        this.walls.put(new Wall("FNH"), new GamePoint(6,4));
-        this.walls.put(new Wall("FNH"), new GamePoint(7,4));
-        this.walls.put(new Wall("FNH"), new GamePoint(8,4));
-        this.walls.put(new Wall("FSH"), new GamePoint(1,6));
-        this.walls.put(new Wall("FSH"), new GamePoint(2,6));
-        this.walls.put(new Wall("FSH"), new GamePoint(3,6));
-        this.walls.put(new Wall("FSH"), new GamePoint(4,6));
-        this.walls.put(new Wall("FSH"), new GamePoint(5,6));
-        this.walls.put(new Wall("FSH"), new GamePoint(6,6));
-        this.walls.put(new Wall("FSH"), new GamePoint(7,6));
-        this.walls.put(new Wall("FSH"), new GamePoint(8,6));
-        this.walls.put(new Wall("FOLEN"), new GamePoint(0,6));
-        this.walls.put(new Wall("FOLNW"), new GamePoint(9,6));
-        this.walls.put(new Wall("FOLWS"), new GamePoint(9,4));
-        this.walls.put(new Wall("FOLSE"), new GamePoint(0,4));
-        this.walls.put(new Wall("FWV"), new GamePoint(0,5));
-        this.walls.put(new Wall("FEV"), new GamePoint(9,5));
-        
-        this.checkpoints.put(new Checkpoint(0), new GamePoint(5,5));
-
     }
     
     public void exportLevel() {

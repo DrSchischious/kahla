@@ -870,7 +870,7 @@ public class Menu extends World
         gf.drawString("Willkommen, " + this.name + ".",60,780);
         
         gf.setFont(new Font(12));
-        gf.drawString("V. 1.4.3",550,790);
+        gf.drawString("V. 1.4.6",550,790);
         
         
         return gf;

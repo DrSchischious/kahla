@@ -24,17 +24,18 @@ public class ChapterButton extends Button
     public boolean isLocked(String s, int exp) {
         if (s.equals("Kapitel 1")) {
             this.neededEXP = 0;
-            return false;
-        } else if (s.equals("Kapitel 2")) {
-            this.neededEXP = 100;
-        } else if (s.equals("Kapitel 3")) {
-            this.neededEXP = 200;
-        } else if (s.equals("Kapitel 4")) {
-            this.neededEXP = 300;
-        } else if (s.equals("Kapitel 5")) {
-            this.neededEXP = 400;
-        } else if (s.equals("Kapitel 6")) {
-            this.neededEXP = 500;
+            return false; 
+
+        } else if (s.equals("Kapitel 2")) { //TODO: && m.progress[x] && m.progress[x+1]...
+            this.neededEXP = 90;
+        } else if (s.equals("Kapitel 3")) { //TODO: && m.progress[x] && m.progress[x+1]...
+            this.neededEXP = 180;
+        } else if (s.equals("Kapitel 4")) { //TODO: && m.progress[x] && m.progress[x+1]...
+            this.neededEXP = 270;
+        } else if (s.equals("Kapitel 5")) { //TODO: && m.progress[x] && m.progress[x+1]...
+            this.neededEXP = 360;
+        } else if (s.equals("Kapitel 6")) { //TODO: && m.progress[x] && m.progress[x+1]...
+            this.neededEXP = 450;
         }
         
         if (exp >= this.neededEXP) {
