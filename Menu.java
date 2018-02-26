@@ -817,9 +817,6 @@ public class Menu extends World
      * Used in every Mode-Change.
      */
     public void clearButtons() {
-        
-                
-                
         if (buttons == null) {
             this.buttons = new MenuButton[20];
         }
@@ -828,22 +825,18 @@ public class Menu extends World
                 this.removeObject(this.buttons[i]);
             }
         }
-    
         if (lbuttons == null) {
             this.lbuttons = new ArrayList<LevelButton>();
         }
         for (int i = 0; i < lbuttons.size(); i++) {
             this.removeObject(this.lbuttons.get(i));
         }
-   
         if (cbuttons == null) {
             this.cbuttons = new ArrayList<ChapterButton>();
         }
         for (int i = 0; i < cbuttons.size(); i++) {
             this.removeObject(this.cbuttons.get(i));
         }
-        
-        
     }
     
     
