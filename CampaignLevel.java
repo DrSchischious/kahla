@@ -1708,6 +1708,8 @@ public class CampaignLevel extends Stage
         Wall wall24 = new Wall("FWV");
         addObject(wall24,this.getRealX(0),this.getRealY(5));
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC02L02() {
@@ -1855,8 +1857,9 @@ public class CampaignLevel extends Stage
         addObject(t65,this.getRealX(7),this.getRealY(9));
         Target t66 = new Target();
         addObject(t66,this.getRealX(9),this.getRealY(9));
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC02L03() {
@@ -1941,8 +1944,9 @@ public class CampaignLevel extends Stage
         addObject(wall36,this.getRealX(4),this.getRealY(6));
         Wall wall37 = new Wall("F");
         addObject(wall37,this.getRealX(6),this.getRealY(6));
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC02L04() {
@@ -2072,8 +2076,9 @@ public class CampaignLevel extends Stage
         addObject(wall56,this.getRealX(8),this.getRealY(7));
         Wall wall57 = new Wall("V");
         addObject(wall57,this.getRealX(8),this.getRealY(8));
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
 
     public void prepareC02L05() {
@@ -2172,8 +2177,9 @@ public class CampaignLevel extends Stage
         addObject(wall41,this.getRealX(0),this.getRealY(7));
         Wall wall42 = new Wall("FWV");
         addObject(wall42,this.getRealX(0),this.getRealY(8));
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC02L06() {
@@ -2299,8 +2305,9 @@ public class CampaignLevel extends Stage
         addObject(wall54,this.getRealX(3),this.getRealY(7));
         Wall wall55 = new Wall("V");
         addObject(wall55,this.getRealX(6),this.getRealY(7));
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC02L07() {
@@ -2435,8 +2442,9 @@ public class CampaignLevel extends Stage
         addObject(wall57,this.getRealX(6),this.getRealY(7));
         Wall wall58 = new Wall("F");
         addObject(wall58,this.getRealX(7),this.getRealY(7));
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC02L08() {
@@ -2600,8 +2608,9 @@ public class CampaignLevel extends Stage
         addObject(wall73,this.getRealX(0),this.getRealY(9));
         Wall wall74 = new Wall("FWV");
         addObject(wall74,this.getRealX(0),this.getRealY(10));
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC02L09() {
@@ -2743,8 +2752,9 @@ public class CampaignLevel extends Stage
         addObject(wall63,this.getRealX(0),this.getRealY(14));
         Wall wall64 = new Wall("FWV");
         addObject(wall64,this.getRealX(0),this.getRealY(15));
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC02L10() {
@@ -2912,6 +2922,8 @@ public class CampaignLevel extends Stage
         addObject(wall76,this.getRealX(0),this.getRealY(10));
         
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC03L01() {
@@ -2997,8 +3009,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage},new Spieler[]{player0,player1,player2},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
 
     public void prepareC03LXX() {
@@ -3197,8 +3210,9 @@ public class CampaignLevel extends Stage
         addObject(wall98,this.getRealX(6),this.getRealY(11));
         Wall wall99 = new Wall("V");
         addObject(wall99,this.getRealX(6),this.getRealY(10));
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC03L02() {
@@ -3313,8 +3327,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage,fifthPage,sixthPage,seventhPage,eigthPage},new Spieler[]{player0,player1,player2,player3},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC03L03() {
@@ -3441,8 +3456,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player0,player1,player2,player3},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
 
     public void prepareC03L04() {
@@ -3571,8 +3587,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage},new Spieler[]{player0,player1,player2,player3,player4},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC03L05() {
@@ -3673,8 +3690,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage,fifthPage,sixthPage},new Spieler[]{player28,player29,player30,player31},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC03L06() {
@@ -3839,8 +3857,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player43,player44,player45,player46,player47},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC03L07() {
@@ -3944,8 +3963,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player46,player47,player48,player49},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
 
     
@@ -4055,8 +4075,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage,secondPage},new Spieler[]{player46,player47},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC03L09() {
@@ -4194,8 +4215,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage},new Spieler[]{player38,player39,player40,player41},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC03L10() {
@@ -4316,8 +4338,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage},new Spieler[]{player37,player38,player39,player40,player41},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC04L01() {
@@ -4469,8 +4492,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage,fifthPage,sixthPage,seventhPage},new Spieler[]{player38,player39,player40,player41},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC04L02() { //Real One
@@ -4587,8 +4611,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage,fifthPage,sixthPage,seventhPage},new Spieler[]{player31,player32,player33},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC04L0X() { //Fake
@@ -4850,8 +4875,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player33,player34,player35},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC04L04() {
@@ -4978,8 +5004,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage,fifthPage,sixthPage},new Spieler[]{player36,player37,player38,player39},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC04L05() {
@@ -5153,8 +5180,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage,fifthPage},new Spieler[]{player43},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC04L06() {
@@ -5353,8 +5381,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage},new Spieler[]{player44,player45,player46,player47},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC04L07() {
@@ -5518,8 +5547,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage},new Spieler[]{player43},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC04L0XX() { //Fake 4-08
@@ -5886,8 +5916,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage},new Spieler[]{player117,player118,player119,player120},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC04L09() {
@@ -6064,8 +6095,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage,fifthPage},new Spieler[]{player1},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
 
     public void prepareC04L10() {
@@ -6240,8 +6272,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage},new Spieler[]{player1},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC05L01() {
@@ -6305,8 +6338,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage,fifthPage,sixthPage},new Spieler[]{player22},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC05L02() {
@@ -6392,8 +6426,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage},new Spieler[]{player36},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
 
     public void prepareC05L03() {
@@ -6481,8 +6516,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player36},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC05L04() {
@@ -6711,8 +6747,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage, thirdPage, fourthPage,fifthPage,sixthPage,seventhPage,eigthPage,ninthPage,tenthPage,eleventhPage,twelthPage,thirteenthPage},new Spieler[]{player97, player98, player99},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC05L05() {
@@ -6880,8 +6917,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage, thirdPage,fourthPage,fifthPage,sixthPage,seventhPage},new Spieler[]{player70,player71,player72,player73},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC05L06() {
@@ -7039,8 +7077,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage, fourthPage, fifthPage, sixthPage,seventhPage,eigthPage,ninthPage},new Spieler[]{player44,player45,player46},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC05L07() {
@@ -7245,8 +7284,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage,thirdPage,fourthPage,fifthPage},new Spieler[]{player85,player86,player87,player88,player89},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC05L08() {
@@ -7454,8 +7494,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage},new Spieler[]{player59,player60},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC05L09() {
@@ -7678,8 +7719,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage},new Spieler[]{player93,player94},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC05L10() {
@@ -7907,8 +7949,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player86,player87},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L01() {
@@ -8045,8 +8088,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player46,player47,player48},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L02() {
@@ -8203,8 +8247,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player57,player58,player59},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L03() {
@@ -8794,8 +8839,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player58,player62},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L04() {
@@ -9332,8 +9378,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player56,player57},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L05() {
@@ -9889,8 +9936,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player55,player56},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L06() {
@@ -10384,8 +10432,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player55, player56},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L07() {
@@ -10687,8 +10736,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player5,player6},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L08() {
@@ -10847,8 +10897,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player45,player47},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L09() {
@@ -11391,8 +11442,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player53,player54,player55,player56},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     public void prepareC06L10() {
@@ -11569,8 +11621,9 @@ public class CampaignLevel extends Stage
         Multiheader mheader = new Multiheader(new String[][]{firstPage, secondPage},new Spieler[]{player47,player48},wm);
         addObject(mheader,0,0);
         mheader.setLocation(0,0);
-        
         this.isRewritable = false;
+        this.isCampaignLevel = true;
+        this.exportLevel();
     }
     
     
