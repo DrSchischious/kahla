@@ -14,25 +14,24 @@ public class Spieler extends Player implements Serializable
      * Act - do whatever the Spieler wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    
+
    
     public Spieler() {
         super();
     }
-    
+
     public Spieler(boolean b) {
         super(b);
     }
-    
+
     //Unter dieser Zeile sollen deine Prozeduren stehen
     public void doppelschritt() {
         schritt();
         schritt();
-    }
-    
+    }   
+
     //Über dieser Zeile sollen deine Prozeduren stehen
- 
+
     public void code() {
         //Unter dieser Zeile sollen deine Befehle stehen
         schritt();
