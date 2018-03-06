@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Savestate
+comment1.params=name\ progress\ loc
+comment1.target=Savestate(java.lang.String,\ boolean[],\ int[][])
+comment2.params=
+comment2.target=void\ exportSavestate()
+comment3.params=path
+comment3.target=void\ exportSavestate(java.lang.String)
+comment4.params=path
+comment4.target=void\ savePath(java.lang.String)
+comment5.params=path
+comment5.target=Savestate\ loadState(java.lang.String)
+comment6.params=
+comment6.target=Savestate\ loadState()
+numComments=7

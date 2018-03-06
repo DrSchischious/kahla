@@ -48,213 +48,7 @@ public class Menu extends World
                 
             Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
             Greenfoot.start();
-            
-            /*if (this.actualLevel.equals("C01L01")) {
-                Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
-                Greenfoot.start();
-                
-            } else if (this.actualLevel.equals("C01L02")) {
-                Greenfoot.setWorld(new CampaignLevel(1,2,10,3,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C01L03")) {
-                Greenfoot.setWorld(new CampaignLevel(1,3,10,3,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C01L04")) {
-                Greenfoot.setWorld(new CampaignLevel(1,4,10,3,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C01L05")) {
-                Greenfoot.setWorld(new CampaignLevel(1,5,10,4,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C01L06")) {
-                Greenfoot.setWorld(new CampaignLevel(1,6,11,6,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C01L07")) {
-                Greenfoot.setWorld(new CampaignLevel(1,7,11,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C01L08")) {
-                Greenfoot.setWorld(new CampaignLevel(1,8,10,4,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C01L09")) {
-                Greenfoot.setWorld(new CampaignLevel(1,9,11,5,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C01L10")) {
-                Greenfoot.setWorld(new CampaignLevel(1,10,10,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L01")) {
-                Greenfoot.setWorld(new CampaignLevel(2,1,11,3,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L02")) {
-                Greenfoot.setWorld(new CampaignLevel(2,2,11,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L03")) {
-                Greenfoot.setWorld(new CampaignLevel(2,3,9,5,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L04")) {
-                Greenfoot.setWorld(new CampaignLevel(2,4,11,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L05")) {
-                Greenfoot.setWorld(new CampaignLevel(2,5,11,6,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L06")) {
-                Greenfoot.setWorld(new CampaignLevel(2,6,10,5,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L07")) {
-                Greenfoot.setWorld(new CampaignLevel(2,7,12,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L08")) {
-                Greenfoot.setWorld(new CampaignLevel(2,8,13,8,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L09")) {
-                Greenfoot.setWorld(new CampaignLevel(2,9,13,13,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C02L10")) {
-                Greenfoot.setWorld(new CampaignLevel(2,10,17,8,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L01")) {
-                Greenfoot.setWorld(new CampaignLevel(3,1,11,3,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L02")) {
-                Greenfoot.setWorld(new CampaignLevel(3,2,10,5,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L03")) {
-                Greenfoot.setWorld(new CampaignLevel(3,3,11,5,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L04")) {
-                Greenfoot.setWorld(new CampaignLevel(3,4,11,5,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L05")) {
-                Greenfoot.setWorld(new CampaignLevel(3,5,9,5,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L06")) {
-                Greenfoot.setWorld(new CampaignLevel(3,6,11,8,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L07")) {
-                Greenfoot.setWorld(new CampaignLevel(3,7,9,5,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L08")) {
-                Greenfoot.setWorld(new CampaignLevel(3,8,13,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L09")) {
-                Greenfoot.setWorld(new CampaignLevel(3,9,11,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C03L10")) {
-                Greenfoot.setWorld(new CampaignLevel(3,10,11,5,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L01")) {
-                Greenfoot.setWorld(new CampaignLevel(4,1,10,9,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L02")) {
-                Greenfoot.setWorld(new CampaignLevel(4,2,9,7,50)); 
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L03")) {
-                Greenfoot.setWorld(new CampaignLevel(4,3,9,8,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L04")) {
-                Greenfoot.setWorld(new CampaignLevel(4,4,9,9,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L05")) {
-                Greenfoot.setWorld(new CampaignLevel(4,5,11,12,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L06")) {
-                Greenfoot.setWorld(new CampaignLevel(4,6,13,9,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L07")) {
-                Greenfoot.setWorld(new CampaignLevel(4,7,12,9,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L08")) {
-                Greenfoot.setWorld(new CampaignLevel(4,8,11,11,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L09")) {
-                Greenfoot.setWorld(new CampaignLevel(4,9,12,9,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C04L10")) {
-                Greenfoot.setWorld(new CampaignLevel(4,10,11,11,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L01")) {
-                Greenfoot.setWorld(new CampaignLevel(5,1,9,3,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L02")) {
-                Greenfoot.setWorld(new CampaignLevel(5,2,9,9,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L03")) {
-                Greenfoot.setWorld(new CampaignLevel(5,3,9,9,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L04")) {
-                Greenfoot.setWorld(new CampaignLevel(5,4,10,13,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L05")) {
-                Greenfoot.setWorld(new CampaignLevel(5,5,11,10,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L06")) {
-                Greenfoot.setWorld(new CampaignLevel(5,6,10,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L07")) {
-                Greenfoot.setWorld(new CampaignLevel(5,7,9,11,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L08")) {
-                Greenfoot.setWorld(new CampaignLevel(5,8,13,9,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L09")) {
-                Greenfoot.setWorld(new CampaignLevel(5,9,13,13,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C05L10")) {
-                Greenfoot.setWorld(new CampaignLevel(5,10,13,13,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L01")) {
-                Greenfoot.setWorld(new CampaignLevel(6,1,13,6,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L02")) {
-                Greenfoot.setWorld(new CampaignLevel(6,2,13,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L03")) {
-                Greenfoot.setWorld(new CampaignLevel(6,3,13,11,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L04")) {
-                Greenfoot.setWorld(new CampaignLevel(6,4,13,11,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L05")) {
-                Greenfoot.setWorld(new CampaignLevel(6,5,15,11,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L06")) {
-                Greenfoot.setWorld(new CampaignLevel(6,6,15,11,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L07")) {
-                Greenfoot.setWorld(new CampaignLevel(6,7,12,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L08")) {
-                Greenfoot.setWorld(new CampaignLevel(6,8,12,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L09")) {
-                Greenfoot.setWorld(new CampaignLevel(6,9,13,7,50));
-                Greenfoot.start();
-            } else if (this.actualLevel.equals("C06L10")) {
-                Greenfoot.setWorld(new CampaignLevel(6,10,13,7,50));
-                Greenfoot.start();
-            } else {
-                this.buttons = new MenuButton[20];
-                this.lbuttons = new ArrayList<LevelButton>();
-                this.cbuttons = new ArrayList<ChapterButton>();
-                this.progress = this.loadState();
-                this.linesOfCode = this.getLinesOfCode();
-                
 
-                //If State does not exist: FIRST MODE
-                //Name & Charakter
-                this.exp = this.getExp(this.progress);
-                this.setMode("Main");
-                
-              
-                
-                this.draw();
-                
-               
-                
-                
-                Greenfoot.start();
-                
-                
-                                
-            } */
         } else {
             
             this.buttons = new MenuButton[20];
@@ -263,15 +57,31 @@ public class Menu extends World
 
             //If State does not exist: FIRST MODE
             //Name & Charakter
-            this.progress = this.loadState();
+            
+            //Loading from Savestate, if exists!
+            Savestate ss = this.loadSavestate();
+            if (ss.equals(null)) {
+                //New Charakter & Name
+                
+            } else {
+                this.progress = ss.progress;
+                this.loc = ss.loc;
+                this.name = ss.name;
+            }
+            
+            //this.progress = this.loadState();
             this.linesOfCode = this.getLinesOfCode();
             
             this.exp = this.getExp(this.progress);
+            //this.name = this.getName();
             this.setMode("Main");
-
             
+            //this.saveState(this.name,this.progress,this.loc);  
+               
         
             this.draw();
+            
+           
             
             
             Greenfoot.start();
@@ -293,12 +103,15 @@ public class Menu extends World
         this.buttons = new MenuButton[20];
         this.lbuttons = new ArrayList<LevelButton>();
         this.cbuttons = new ArrayList<ChapterButton>();
+        
+        
         this.progress = this.loadState();
         this.linesOfCode = this.getLinesOfCode();
 
         //If State does not exist: FIRST MODE
         //Name & Charakter
         this.exp = this.getExp(this.progress);
+        
         this.setMode("Main");
         
 
@@ -308,6 +121,27 @@ public class Menu extends World
         Greenfoot.start();
         
         
+    }
+    
+    public void saveState(String name, boolean[] progress, int[][] loc) {
+        Savestate ss = new Savestate(name, progress, loc);
+        
+        ss.exportSavestate("data/Savestates/"+name+".sav");
+    }
+    
+    public Savestate loadSavestate() {
+        String path = "";
+        try {
+            BufferedReader in = new BufferedReader(new FileReader("data/actualState.txt"));
+            try {
+               path = in.readLine();           
+            } catch(IOException e) {
+                
+            }
+        } catch (FileNotFoundException e) {
+
+        }
+        return Savestate.loadState(path);
     }
     
     public Level reloadLevel(String path) {
