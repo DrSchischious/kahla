@@ -197,11 +197,9 @@ public class CampaignLevel extends Stage
     
     public static void savePath(String path) {
         try {
-            //path?
             BufferedWriter out = new BufferedWriter(new FileWriter("data/actualLevel.txt"));  
             out.write(path);
             out.close();
-            
         } catch(IOException e) {
             
         } 
@@ -784,7 +782,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 1;
         this.level = 1;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC01L02() {
@@ -861,7 +859,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 1;
         this.level = 2;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC01L03() {
@@ -932,7 +930,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true; 
         this.chapter = 1;
         this.level = 3;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC01L04() {
@@ -1004,7 +1002,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;   
         this.chapter = 1;
         this.level = 4;
-        this.exportLevel();
+        //this.exportLevel();
         
         
     }
@@ -1109,7 +1107,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;    
         this.chapter = 1;
         this.level = 5;
-        this.exportLevel();
+        //this.exportLevel();
         
         
     }
@@ -1195,7 +1193,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 1;
         this.level = 6;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC01L07() {
@@ -1287,7 +1285,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;  
         this.chapter = 1;
         this.level = 7;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC01L08() {
@@ -1376,7 +1374,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;  
         this.chapter = 1;
         this.level = 8;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC01L09() {
@@ -1512,7 +1510,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;   
         this.chapter = 1;
         this.level = 9;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC01L10() {
@@ -1660,7 +1658,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;    
         this.chapter = 1;
         this.level = 10;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC02L01() {
@@ -1738,7 +1736,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 1;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC02L02() {
@@ -1890,7 +1888,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 2;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC02L03() {
@@ -1979,7 +1977,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 3;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC02L04() {
@@ -2113,7 +2111,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 4;
-        this.exportLevel();
+        //this.exportLevel();
     }
 
     public void prepareC02L05() {
@@ -2216,7 +2214,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 5;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC02L06() {
@@ -2346,7 +2344,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 6;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC02L07() {
@@ -2485,7 +2483,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 7;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC02L08() {
@@ -2653,7 +2651,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 8;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC02L09() {
@@ -2799,7 +2797,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 9;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC02L10() {
@@ -2970,7 +2968,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 2;
         this.level = 10;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC03L01() {
@@ -3060,7 +3058,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 1;
-        this.exportLevel();
+        //this.exportLevel();
     }
 
     public void prepareC03LXX() {
@@ -3263,7 +3261,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 2;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC03L02() {
@@ -3382,7 +3380,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 2;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC03L03() {
@@ -3513,7 +3511,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 3;
-        this.exportLevel();
+        //this.exportLevel();
     }
 
     public void prepareC03L04() {
@@ -3646,7 +3644,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 4;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC03L05() {
@@ -3751,7 +3749,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 5;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC03L06() {
@@ -3920,7 +3918,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 6;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC03L07() {
@@ -4028,7 +4026,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 7;
-        this.exportLevel();
+        //this.exportLevel();
     }
 
     
@@ -4142,7 +4140,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 8;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC03L09() {
@@ -4284,7 +4282,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 9;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC03L10() {
@@ -4409,7 +4407,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 3;
         this.level = 10;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC04L01() {
@@ -4565,7 +4563,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 1;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC04L02() { //Real One
@@ -4686,7 +4684,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 2;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC04L0X() { //Fake
@@ -4952,7 +4950,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 3;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC04L04() {
@@ -5083,7 +5081,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 4;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC04L05() {
@@ -5261,7 +5259,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 5;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC04L06() {
@@ -5464,7 +5462,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 6;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC04L07() {
@@ -5632,7 +5630,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 7;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC04L0XX() { //Fake 4-08
@@ -6003,7 +6001,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 8;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC04L09() {
@@ -6184,7 +6182,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 9;
-        this.exportLevel();
+        //this.exportLevel();
     }
 
     public void prepareC04L10() {
@@ -6363,7 +6361,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 4;
         this.level = 10;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC05L01() {
@@ -6431,7 +6429,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 1;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC05L02() {
@@ -6521,7 +6519,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 2;
-        this.exportLevel();
+        //this.exportLevel();
     }
 
     public void prepareC05L03() {
@@ -6613,7 +6611,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 3;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC05L04() {
@@ -6846,7 +6844,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 4;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC05L05() {
@@ -7018,7 +7016,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 5;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC05L06() {
@@ -7180,7 +7178,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 6;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC05L07() {
@@ -7389,7 +7387,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 7;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC05L08() {
@@ -7601,7 +7599,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 8;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC05L09() {
@@ -7828,7 +7826,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 9;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC05L10() {
@@ -8060,7 +8058,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 5;
         this.level = 10;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC06L01() {
@@ -8201,7 +8199,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 1;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC06L02() {
@@ -8362,7 +8360,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 2;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC06L03() {
@@ -8956,7 +8954,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 3;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC06L04() {
@@ -9497,7 +9495,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 4;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC06L05() {
@@ -10057,7 +10055,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 5;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC06L06() {
@@ -10555,7 +10553,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 6;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC06L07() {
@@ -10861,7 +10859,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 7;
-        this.exportLevel();
+        //this.exportLevel();
         
     }
     
@@ -11025,7 +11023,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 8;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC06L09() {
@@ -11572,7 +11570,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 9;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     public void prepareC06L10() {
@@ -11753,7 +11751,7 @@ public class CampaignLevel extends Stage
         this.isCampaignLevel = true;
         this.chapter = 6;
         this.level = 10;
-        this.exportLevel();
+        //this.exportLevel();
     }
     
     
