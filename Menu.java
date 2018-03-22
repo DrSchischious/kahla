@@ -49,6 +49,7 @@ public class Menu extends World
             Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
             Greenfoot.start();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             /*if (this.actualLevel.equals("C01L01")) {
             Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
@@ -251,6 +252,9 @@ public class Menu extends World
 =======
 
 >>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
+=======
+
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
         } else {
 
             this.buttons = new MenuButton[20];
@@ -259,6 +263,23 @@ public class Menu extends World
 
             //If State does not exist: FIRST MODE
             //Name & Charakter
+<<<<<<< HEAD
+=======
+            
+            //Loading from Savestate, if exists!
+            Savestate ss = this.loadSavestate();
+            if (ss.equals(null)) {
+                //New Charakter & Name
+                
+            } else {
+                this.progress = ss.progress;
+                this.loc = ss.loc;
+                this.name = ss.name;
+            }
+            
+            //this.progress = this.loadState();
+            this.linesOfCode = this.getLinesOfCode();
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
             
             //Loading from Savestate, if exists!
             Savestate ss = this.loadSavestate();
@@ -278,9 +299,12 @@ public class Menu extends World
             //this.name = this.getName();
             this.setMode("Main");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             this.draw();
 =======
+=======
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
             
             //this.saveState(this.name,this.progress,this.loc);  
                
@@ -288,6 +312,10 @@ public class Menu extends World
             this.draw();
             
            
+<<<<<<< HEAD
+=======
+            
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
             
             
 >>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
@@ -313,6 +341,11 @@ public class Menu extends World
         //If State does not exist: FIRST MODE
         //Name & Charakter
         this.exp = this.getExp(this.progress);
+<<<<<<< HEAD
+=======
+        
+        this.setMode("Main");
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
         
         this.setMode("Main");
 
@@ -331,6 +364,15 @@ public class Menu extends World
         ss.exportSavestate("data/Savestates/"+name+".sav");
     }
     
+<<<<<<< HEAD
+=======
+    public void saveState(String name, boolean[] progress, int[][] loc) {
+        Savestate ss = new Savestate(name, progress, loc);
+        
+        ss.exportSavestate("data/Savestates/"+name+".sav");
+    }
+    
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
     public Savestate loadSavestate() {
         String path = "";
         try {
@@ -346,6 +388,9 @@ public class Menu extends World
         return Savestate.loadState(path);
     }
     
+<<<<<<< HEAD
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
+=======
 >>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
     public Level reloadLevel(String path) {
         FileInputStream fis = null;

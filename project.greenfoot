@@ -358,20 +358,27 @@ dependency99.from=Level
 dependency99.to=GamePoint
 dependency99.type=UsesDependency
 <<<<<<< HEAD
+<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
 =======
+=======
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
 editor.fx.0.height=1096
 editor.fx.0.width=1936
 editor.fx.0.x=-8
 editor.fx.0.y=-8
+<<<<<<< HEAD
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
+=======
 >>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
 editor.fx.1.height=1936
 editor.fx.1.width=1096
 editor.fx.1.x=1912
 editor.fx.1.y=-862
+<<<<<<< HEAD
 <<<<<<< HEAD
 mainWindow.height=1946
 mainWindow.width=3026
@@ -380,12 +387,17 @@ mainWindow.y=-13
 package.numDependencies=105
 package.numTargets=29
 =======
+=======
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
 mainWindow.height=1080
 mainWindow.width=928
 mainWindow.x=230
 mainWindow.y=7
 package.numDependencies=109
 package.numTargets=30
+<<<<<<< HEAD
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
+=======
 >>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
 project.charset=UTF-8
 readme.height=58
