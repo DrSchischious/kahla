@@ -20,15 +20,15 @@ public class Menu extends World
     ArrayList<ChapterButton> cbuttons;
     String actualLevel = "";
     String name = "";
-    
+
     boolean[] progress; 
     int[][] loc;
     int exp;
     int linesOfCode = 0;
-    
+
     boolean isOnCommand = false;
     boolean firstAct = true;
-    
+
     /**
      * Standard Constructor, which is called on many occasions like:
      * - Starting the game for the first time
@@ -39,24 +39,232 @@ public class Menu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 800, 1); 
-        
+
         this.actualLevel = this.getLevel();
-        
+
         if (this.actualLevel != null) {
-            
+
             Level lv = this.reloadLevel(actualLevel);
-                
+
             Greenfoot.setWorld(new CampaignLevel(lv.width,lv.height,lv));
             Greenfoot.start();
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+            /*if (this.actualLevel.equals("C01L01")) {
+            Greenfoot.setWorld(new CampaignLevel(1,1,10,3,50));
+            Greenfoot.start();
+
+            } else if (this.actualLevel.equals("C01L02")) {
+            Greenfoot.setWorld(new CampaignLevel(1,2,10,3,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C01L03")) {
+            Greenfoot.setWorld(new CampaignLevel(1,3,10,3,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C01L04")) {
+            Greenfoot.setWorld(new CampaignLevel(1,4,10,3,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C01L05")) {
+            Greenfoot.setWorld(new CampaignLevel(1,5,10,4,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C01L06")) {
+            Greenfoot.setWorld(new CampaignLevel(1,6,11,6,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C01L07")) {
+            Greenfoot.setWorld(new CampaignLevel(1,7,11,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C01L08")) {
+            Greenfoot.setWorld(new CampaignLevel(1,8,10,4,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C01L09")) {
+            Greenfoot.setWorld(new CampaignLevel(1,9,11,5,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C01L10")) {
+            Greenfoot.setWorld(new CampaignLevel(1,10,10,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L01")) {
+            Greenfoot.setWorld(new CampaignLevel(2,1,11,3,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L02")) {
+            Greenfoot.setWorld(new CampaignLevel(2,2,11,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L03")) {
+            Greenfoot.setWorld(new CampaignLevel(2,3,9,5,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L04")) {
+            Greenfoot.setWorld(new CampaignLevel(2,4,11,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L05")) {
+            Greenfoot.setWorld(new CampaignLevel(2,5,11,6,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L06")) {
+            Greenfoot.setWorld(new CampaignLevel(2,6,10,5,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L07")) {
+            Greenfoot.setWorld(new CampaignLevel(2,7,12,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L08")) {
+            Greenfoot.setWorld(new CampaignLevel(2,8,13,8,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L09")) {
+            Greenfoot.setWorld(new CampaignLevel(2,9,13,13,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C02L10")) {
+            Greenfoot.setWorld(new CampaignLevel(2,10,17,8,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L01")) {
+            Greenfoot.setWorld(new CampaignLevel(3,1,11,3,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L02")) {
+            Greenfoot.setWorld(new CampaignLevel(3,2,10,5,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L03")) {
+            Greenfoot.setWorld(new CampaignLevel(3,3,11,5,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L04")) {
+            Greenfoot.setWorld(new CampaignLevel(3,4,11,5,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L05")) {
+            Greenfoot.setWorld(new CampaignLevel(3,5,9,5,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L06")) {
+            Greenfoot.setWorld(new CampaignLevel(3,6,11,8,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L07")) {
+            Greenfoot.setWorld(new CampaignLevel(3,7,9,5,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L08")) {
+            Greenfoot.setWorld(new CampaignLevel(3,8,13,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L09")) {
+            Greenfoot.setWorld(new CampaignLevel(3,9,11,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C03L10")) {
+            Greenfoot.setWorld(new CampaignLevel(3,10,11,5,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L01")) {
+            Greenfoot.setWorld(new CampaignLevel(4,1,10,9,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L02")) {
+            Greenfoot.setWorld(new CampaignLevel(4,2,9,7,50)); 
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L03")) {
+            Greenfoot.setWorld(new CampaignLevel(4,3,9,8,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L04")) {
+            Greenfoot.setWorld(new CampaignLevel(4,4,9,9,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L05")) {
+            Greenfoot.setWorld(new CampaignLevel(4,5,11,12,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L06")) {
+            Greenfoot.setWorld(new CampaignLevel(4,6,13,9,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L07")) {
+            Greenfoot.setWorld(new CampaignLevel(4,7,12,9,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L08")) {
+            Greenfoot.setWorld(new CampaignLevel(4,8,11,11,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L09")) {
+            Greenfoot.setWorld(new CampaignLevel(4,9,12,9,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C04L10")) {
+            Greenfoot.setWorld(new CampaignLevel(4,10,11,11,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L01")) {
+            Greenfoot.setWorld(new CampaignLevel(5,1,9,3,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L02")) {
+            Greenfoot.setWorld(new CampaignLevel(5,2,9,9,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L03")) {
+            Greenfoot.setWorld(new CampaignLevel(5,3,9,9,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L04")) {
+            Greenfoot.setWorld(new CampaignLevel(5,4,10,13,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L05")) {
+            Greenfoot.setWorld(new CampaignLevel(5,5,11,10,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L06")) {
+            Greenfoot.setWorld(new CampaignLevel(5,6,10,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L07")) {
+            Greenfoot.setWorld(new CampaignLevel(5,7,9,11,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L08")) {
+            Greenfoot.setWorld(new CampaignLevel(5,8,13,9,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L09")) {
+            Greenfoot.setWorld(new CampaignLevel(5,9,13,13,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C05L10")) {
+            Greenfoot.setWorld(new CampaignLevel(5,10,13,13,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L01")) {
+            Greenfoot.setWorld(new CampaignLevel(6,1,13,6,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L02")) {
+            Greenfoot.setWorld(new CampaignLevel(6,2,13,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L03")) {
+            Greenfoot.setWorld(new CampaignLevel(6,3,13,11,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L04")) {
+            Greenfoot.setWorld(new CampaignLevel(6,4,13,11,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L05")) {
+            Greenfoot.setWorld(new CampaignLevel(6,5,15,11,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L06")) {
+            Greenfoot.setWorld(new CampaignLevel(6,6,15,11,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L07")) {
+            Greenfoot.setWorld(new CampaignLevel(6,7,12,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L08")) {
+            Greenfoot.setWorld(new CampaignLevel(6,8,12,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L09")) {
+            Greenfoot.setWorld(new CampaignLevel(6,9,13,7,50));
+            Greenfoot.start();
+            } else if (this.actualLevel.equals("C06L10")) {
+            Greenfoot.setWorld(new CampaignLevel(6,10,13,7,50));
+            Greenfoot.start();
+            } else {
+            this.buttons = new MenuButton[20];
+            this.lbuttons = new ArrayList<LevelButton>();
+            this.cbuttons = new ArrayList<ChapterButton>();
+            this.progress = this.loadState();
+            this.linesOfCode = this.getLinesOfCode();
+
+            //If State does not exist: FIRST MODE
+            //Name & Charakter
+            this.exp = this.getExp(this.progress);
+            this.setMode("Main");
+
+            this.draw();
+                
+            Greenfoot.start();
+
+            } */
+=======
+
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
+=======
+
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
         } else {
-            
+
             this.buttons = new MenuButton[20];
             this.lbuttons = new ArrayList<LevelButton>();
             this.cbuttons = new ArrayList<ChapterButton>();
 
             //If State does not exist: FIRST MODE
             //Name & Charakter
+<<<<<<< HEAD
+=======
             
             //Loading from Savestate, if exists!
             Savestate ss = this.loadSavestate();
@@ -71,10 +279,32 @@ public class Menu extends World
             
             //this.progress = this.loadState();
             this.linesOfCode = this.getLinesOfCode();
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
             
+            //Loading from Savestate, if exists!
+            Savestate ss = this.loadSavestate();
+            if (ss.equals(null)) {
+                //New Charakter & Name
+                
+            } else {
+                this.progress = ss.progress;
+                this.loc = ss.loc;
+                this.name = ss.name;
+            }
+            
+            //this.progress = this.loadState();
+            this.linesOfCode = this.getLinesOfCode();
+
             this.exp = this.getExp(this.progress);
             //this.name = this.getName();
             this.setMode("Main");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            this.draw();
+=======
+=======
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
             
             //this.saveState(this.name,this.progress,this.loc);  
                
@@ -82,24 +312,24 @@ public class Menu extends World
             this.draw();
             
            
+<<<<<<< HEAD
+=======
+            
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
             
             
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
             Greenfoot.start();
-            
-     
-            
                         
         }
-        
-        
     }
-    
+
     public Menu(boolean command)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 800, 1); 
         this.isOnCommand = command;
-        
+
         this.buttons = new MenuButton[20];
         this.lbuttons = new ArrayList<LevelButton>();
         this.cbuttons = new ArrayList<ChapterButton>();
@@ -111,17 +341,22 @@ public class Menu extends World
         //If State does not exist: FIRST MODE
         //Name & Charakter
         this.exp = this.getExp(this.progress);
+<<<<<<< HEAD
+=======
         
         this.setMode("Main");
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
         
+        this.setMode("Main");
 
         this.draw();
         this.actualLevel = this.getLevel();
 
         Greenfoot.start();
-        
-        
+
     }
+<<<<<<< HEAD
+=======
     
     public void saveState(String name, boolean[] progress, int[][] loc) {
         Savestate ss = new Savestate(name, progress, loc);
@@ -129,6 +364,15 @@ public class Menu extends World
         ss.exportSavestate("data/Savestates/"+name+".sav");
     }
     
+<<<<<<< HEAD
+=======
+    public void saveState(String name, boolean[] progress, int[][] loc) {
+        Savestate ss = new Savestate(name, progress, loc);
+        
+        ss.exportSavestate("data/Savestates/"+name+".sav");
+    }
+    
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
     public Savestate loadSavestate() {
         String path = "";
         try {
@@ -144,18 +388,22 @@ public class Menu extends World
         return Savestate.loadState(path);
     }
     
+<<<<<<< HEAD
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
+=======
+>>>>>>> cc944136f7ce5f9441ee03b126f16bb9dc2c6a5c
     public Level reloadLevel(String path) {
         FileInputStream fis = null;
         ObjectInputStream ois = null;
         Level read = null;
-        
+
         try {
             fis = new FileInputStream(path);
-            
+
             ois = new ObjectInputStream(fis);
-          
+
             read = (Level)ois.readObject();
-            
+
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
@@ -166,7 +414,7 @@ public class Menu extends World
                     e.printStackTrace();
                 }
             }
-            
+
             if (ois != null) {
                 try {
                     ois.close();
@@ -175,14 +423,14 @@ public class Menu extends World
                 }
             }
         }
-        
+
         return read;
     }
-    
+
     public int getLinesOfCode() {
         this.loc = new int[7][10];
         int sum = 0;
-        
+
         int i = 0;
         //i = 0 --> [0][0]
         //i = 1 --> [0][1]
@@ -190,35 +438,34 @@ public class Menu extends World
         try {
             BufferedReader in = new BufferedReader(new FileReader("data/lines.txt"));
             for (String x = in.readLine(); x != null; x = in.readLine()) {
-                  this.loc[(int)(i/10)][(i%10)] = Integer.parseInt(x);
-                  sum += this.loc[(int)(i/10)][(i%10)];
-                  i++;
+                this.loc[(int)(i/10)][(i%10)] = Integer.parseInt(x);
+                sum += this.loc[(int)(i/10)][(i%10)];
+                i++;
             }
             in.close();
         } catch (FileNotFoundException e) {
-            
+
         } catch (IOException e) {
-            
+
         }
-        
+
         /*
         for (int i = 0; i < 7; i++) {
-            for (int j = 0; j < 10; j++) {
-                if (progress[(i*10) + j] == true) {
-                    //progress[0] (i = 0; j = 0) --> C01L01
-                    //progess[1] (i = 0; j = 1) -->C01L02
+        for (int j = 0; j < 10; j++) {
+        if (progress[(i*10) + j] == true) {
+        //progress[0] (i = 0; j = 0) --> C01L01
+        //progess[1] (i = 0; j = 1) -->C01L02
 
-                    sum += getLinesOfData(i+1,j+1);
-                    
-
-                }
-            }
+        sum += getLinesOfData(i+1,j+1);
 
         }
-        */
+        }
+
+        }
+         */
         return sum;
     }
-    
+
     public int getNumberOfDoneLevels() {
         int sum = 0;
         for (int i = 0; i < this.progress.length; i++) {
@@ -228,131 +475,124 @@ public class Menu extends World
         }
         return sum;
     }
-    
+
     public int getLinesOfData(int chapter, int level) {
         int i = 0;
         try {
-           BufferedReader in;
-           
-           if (level < 10) {
+            BufferedReader in;
 
-               in = new BufferedReader(new FileReader("../Lösungen/Lösung-Chapter0"+chapter+"-Level0"+level+".txt"));
-           } else {
+            if (level < 10) {
 
-               in = new BufferedReader(new FileReader("../Lösungen/Lösung-Chapter0"+chapter+"-Level"+level+".txt"));
-           }
-           
-           for (String x = in.readLine(); x != null; x = in.readLine()) {
-              
+                in = new BufferedReader(new FileReader("../Lösungen/Lösung-Chapter0"+chapter+"-Level0"+level+".txt"));
+            } else {
+
+                in = new BufferedReader(new FileReader("../Lösungen/Lösung-Chapter0"+chapter+"-Level"+level+".txt"));
+            }
+
+            for (String x = in.readLine(); x != null; x = in.readLine()) {
+
                
-               
-               if ((x.contains("//") || x.contains("/*") || x.contains("*") || x.contains("*/")) && !x.contains(";")){
+                if ((x.contains("//") || x.contains("/*") || x.contains("*") || x.contains("*/")) && !x.contains(";")){
 
-               } else {
-                   i++;
+                } else {
+                    i++;
                 }
-               
-                
-           }
-           i -= 2;
-           
-           in.close();
-           
-           
-           /* Array mit LoC
-            * 
-            * 
-            */
-           this.loc[chapter-1][level-1] = i;
-           
-           return i;
-           
-          
+
+            }
+            i -= 2;
+
+            in.close();
+
+            /* Array mit LoC
+             * 
+             * 
+             */
+            this.loc[chapter-1][level-1] = i;
+
+            return i;
+
         } catch(IOException e) {
-           return 0;
+            return 0;
         } 
 
     }
-    
+
     /**
      * Reads the currently accessed level, if the game was resetted while being in a level.
      * The level is being written in a file.
      */
     public String getLevel() {
         try {
-           BufferedReader in = new BufferedReader(new FileReader("data/actualLevel.txt"));
-           return in.readLine();
+            BufferedReader in = new BufferedReader(new FileReader("data/actualLevel.txt"));
+            return in.readLine();
         } catch(IOException e) {
-           return "";
+            return "";
         } 
     }
-    
+
     public String getName() {
         try {
-           BufferedReader in = new BufferedReader(new FileReader("data/name.txt"));
-           String n = in.readLine();
+            BufferedReader in = new BufferedReader(new FileReader("data/name.txt"));
+            String n = in.readLine();
 
-           in.close();
-           if (n != null) {
-               if (n.equals("")) {
-                   n = Greenfoot.ask("Wie ist dein Vorname?");
-                
-                   
-                   this.saveName(n);
-                   this.setKahla();
-                   //Set Kahla as Standard-Character
-                   
-                   
+            in.close();
+            if (n != null) {
+                if (n.equals("")) {
+                    n = Greenfoot.ask("Wie ist dein Vorname?");
+
+                    this.saveName(n);
+                    this.setKahla();
+                    //Set Kahla as Standard-Character
+
                 }
             } else {
-                
+
                 n = "";
-               
+
                 n = Greenfoot.ask("Wie ist dein Vorname?");
-                
+
                 this.saveName(n);
                 this.setKahla();
             }
-          
-           return n;
+
+            return n;
         } catch(IOException e) {
-            
-           String n = Greenfoot.ask("Wie ist dein Vorname?");
-          
-           this.saveName(n);
-           this.setKahla();
-           return n;
+
+            String n = Greenfoot.ask("Wie ist dein Vorname?");
+
+            this.saveName(n);
+            this.setKahla();
+            return n;
         } 
     }
-    
+
     public void saveName(String n) {
         try {
-            
+
             BufferedWriter out = new BufferedWriter(new FileWriter("data/name.txt"));
             if (n == null) {
                 out.write("");
             } else {
                 out.write(n);
             }
-            
-            
+
             out.close();
         } catch (IOException e) {
-            
+
         }
     }
-    
+
     public void setKahla() {
         try {
             BufferedWriter out = new BufferedWriter(new FileWriter("data/character.txt"));  
             out.write("Kahla");
             out.close();
-            
+
         } catch(IOException e) {
-            
+
         } 
     }
-    
+
     /**
      * Draws the Menu-Screen with Buttons, based on the current mode.
      * Main - Main-Menu
@@ -366,7 +606,7 @@ public class Menu extends World
         if (this.mode != null) {
             GreenfootImage gf = new GreenfootImage(600,800);
             this.clearButtons();
-        
+
             if (this.mode.equals("Main")) {
                 gf = this.drawMain(gf);
                 this.addMainButtons();
@@ -410,7 +650,7 @@ public class Menu extends World
                 gf = this.drawHelp(gf,7);
                 this.addLevelOneButtons();
             }
-            
+
             else if (this.mode.equals("Schritt")) {
                 gf = this.drawHelp(gf,200);
                 this.addLevelTwoButtonsToCommand();
@@ -436,8 +676,7 @@ public class Menu extends World
                 gf = this.drawHelp(gf,207);
                 this.addLevelTwoButtonsToCommand();
             }
-            
-            
+
             else if (this.mode.equals("SiehtCheckpoint")) {
                 gf = this.drawHelp(gf,300);
                 this.addLevelTwoButtonsToCondition();
@@ -460,7 +699,7 @@ public class Menu extends World
                 gf = this.drawHelp(gf,306);
                 this.addLevelTwoButtonsToCondition();
             }
-            
+
             else if (this.mode.equals("Lesehinweise")) {
                 gf = this.drawHelp(gf,400);
                 this.addLevelTwoButtonsToSyntax();
@@ -480,8 +719,7 @@ public class Menu extends World
                 gf = this.drawHelp(gf,405);
                 this.addLevelTwoButtonsToSyntax();
             }
-            
-            
+
             else if (this.mode.equals("Programmierung")) {
                 gf = this.drawHelp(gf,500);
                 this.addLevelTwoButtonsToConcept();
@@ -516,7 +754,7 @@ public class Menu extends World
                 gf = this.drawHelp(gf,510);
                 this.addLevelTwoButtonsToConcept();
             } 
-            
+
             else if (this.mode.equals("Welt")) {
                 gf = this.drawHelp(gf,600);
                 this.addLevelTwoButtonsToElement();
@@ -548,7 +786,7 @@ public class Menu extends World
                 gf = this.drawHelp(gf,609);
                 this.addLevelTwoButtonsToElement();
             } 
-            
+
             else if (this.mode.equals("Ändern der Spielfigur")) {
                 gf = this.drawHelp(gf,700);
                 this.addLevelTwoButtonsToGeneral();
@@ -566,29 +804,29 @@ public class Menu extends World
                 this.addLevelTwoButtonsToGeneral();
             } 
             /* else if (this.mode.equals("Schritt")) {
-                gf = this.drawCommands(gf,1);
-                this.addCommandsExtraButtons();
+            gf = this.drawCommands(gf,1);
+            this.addCommandsExtraButtons();
             } else if (this.mode.equals("Aufheben")) {
-                gf = this.drawCommands(gf,2);
-                this.addCommandsExtraButtons();
+            gf = this.drawCommands(gf,2);
+            this.addCommandsExtraButtons();
             } else if (this.mode.equals("Schießen")) {
-                gf = this.drawCommands(gf,3);
-                this.addCommandsExtraButtons();
+            gf = this.drawCommands(gf,3);
+            this.addCommandsExtraButtons();
             } else if (this.mode.equals("LinksDrehen")) {
-                gf = this.drawCommands(gf,4);
-                this.addCommandsExtraButtons();
+            gf = this.drawCommands(gf,4);
+            this.addCommandsExtraButtons();
             } else if (this.mode.equals("RechtsDrehen")) {
-                gf = this.drawCommands(gf,5);
-                this.addCommandsExtraButtons();
+            gf = this.drawCommands(gf,5);
+            this.addCommandsExtraButtons();
             } else if (this.mode.equals("Syntax")) {
-                gf = this.drawCommands(gf,8);
-                this.addCommandsExtraButtons();
+            gf = this.drawCommands(gf,8);
+            this.addCommandsExtraButtons();
             } else if (this.mode.equals("Prozeduren")) {
-                gf = this.drawCommands(gf,9);
-                this.addCommandsExtraButtons();
+            gf = this.drawCommands(gf,9);
+            this.addCommandsExtraButtons();
             } else if (this.mode.equals("Abfragen")) {
-                gf = this.drawCommands(gf,10);
-                this.addCommandsExtraButtons();
+            gf = this.drawCommands(gf,10);
+            this.addCommandsExtraButtons();
             }*/ else if (this.mode.equals("Chapter One")) {
                 gf = this.drawLevel(gf, 1);
                 this.addLevelButtons();
@@ -611,14 +849,13 @@ public class Menu extends World
                 gf = this.drawLevel(gf, 7);
                 this.addLevelButtons();
             }
-            
-            
+
             this.setBackground(gf);
         }
-        
+
         //TODO ALLE BEFEHLE
         //TODO ALLE BEDINGUNGEN
-        
+
         /*
          * 
          * this.buttons[0] = new MenuButton("Back",this);
@@ -628,24 +865,23 @@ public class Menu extends World
         this.buttons[4] = new MenuButton("LinksDrehen",this);
         this.buttons[5] = new MenuButton("RechtsDrehen",this);
         this.buttons[6] = new MenuButton("Färben",this);
-        
+
         this.buttons[7] = new MenuButton("Teile & Herrsche",this);
         this.buttons[8] = new MenuButton("Prozeduren",this);
         this.buttons[9] = new MenuButton("Syntax",this);
         this.buttons[10] = new MenuButton("Abfragen",this);
-        
+
         this.buttons[11] = new MenuButton("Checkpoint",this);
         this.buttons[12] = new MenuButton("Token",this);
         this.buttons[13] = new MenuButton("Zielscheibe",this);
         this.buttons[14] = new MenuButton("Markierung",this);
-    
-        
+
          * 
          * 
          */
-        
+
     }
-    
+
     /**
      * Removes every used button on the Screen.
      * Used in every Mode-Change.
@@ -672,8 +908,7 @@ public class Menu extends World
             this.removeObject(this.cbuttons.get(i));
         }
     }
-    
-    
+
     /**
      * Draws the main hub, which is the first seen screen.
      * Everything else is accessible from here.
@@ -686,23 +921,20 @@ public class Menu extends World
         gf.setColor(new Color(0,0,0,255));
         gf.setFont(new Font(30));
         gf.drawString("Willkommen bei Java mit Kahla", 90, 60);
-        
+
         GreenfootImage cover = new GreenfootImage("Cover.png");
         cover.scale(400,400);
         gf.drawImage(cover,100,80);
-        
+
         gf.setFont(new Font(24));
-        
-        
+
         gf.drawString("Willkommen, " + this.name + ".",60,780);
-        
         gf.setFont(new Font(12));
         gf.drawString("V. 1.4.6",550,790);
-        
-        
+
         return gf;
     }
-    
+
     public GreenfootImage drawOptions(GreenfootImage gf) {
         gf.setColor(new Color(255,255,255,255));
         gf.fill();
@@ -711,13 +943,13 @@ public class Menu extends World
         gf.drawString("Optionen", 10, 60);
         gf.setFont(new Font(25));
         gf.drawString("Welchen Charakter möchtest du spielen?",20,100);
-        
+
         gf.drawString("Möchtest du deinen Spielstand zurücksetzen?",20,200);
         gf.drawString("Möchtest du deine Lösungen einsehen?",20,310);
-        
+
         return gf;
     }
-    
+
     public GreenfootImage drawOthers(GreenfootImage gf) {
         // TODO
         gf.setColor(new Color(255,255,255,255));
@@ -726,10 +958,10 @@ public class Menu extends World
         gf.setFont(new Font(30));
         gf.drawString("Weitere Modi", 20, 60);
         gf.setFont(new Font(25));
-        
+
         return gf;
     }
-    
+
     /**
      * Draws the Chapter menu, which just lets the player choose a chapter.
      */
@@ -739,7 +971,7 @@ public class Menu extends World
         gf.setColor(new Color(0,0,0,255));
         gf.setFont(new Font(30));
         gf.drawString("Kapitelauswahl", 10, 40);
-        
+
         gf.setColor(new Color(0,0,130,255));
         gf.setFont(new Font(15));
         if (this.exp < 100) {
@@ -756,24 +988,22 @@ public class Menu extends World
             gf.drawString("Noch " + (600-this.exp) + " EXP zum 7. Kapitel",400,30);
         } 
         this.addChapterImage();
-        
-        
-        
+
         
         return gf;
     }
-    
+
     private void saveChapter(int chapter) {
         try {
             BufferedWriter out = new BufferedWriter(new FileWriter("data/actualChapter.txt"));  
             out.write(""+chapter);
             out.close();
-            
+
         } catch(IOException e) {
-            
+
         } 
     }
-    
+
     /**
      * Draws the Level menu, based on a chosen chapter and lets the player choose a level.
      */
@@ -798,13 +1028,13 @@ public class Menu extends World
         } else if (this.exp < 600) {
             gf.drawString("Noch " + (600-this.exp) + " EXP zum 7. Kapitel",400,30);
         } 
-        
+
         this.addLevelImage(chapter);
         this.saveChapter(chapter);
-        
+
         return gf;
     }
-    
+
     /**
      * Draws a credits screen with information about the author and the program.
      */
@@ -816,12 +1046,11 @@ public class Menu extends World
         gf.drawString("Credits", 80, 200);
         gf.drawString("Entwickler: Daniel Schisch", 80, 250);
         gf.drawString("Illustrationen: Hannah Elsner",80,290);
-        
-        
+
         
         return gf;
     }
-    
+
     /**
      * Draws a statistics screen with information about the players progress.
      */
@@ -831,23 +1060,21 @@ public class Menu extends World
         gf.setColor(new Color(0,0,0,255));
         gf.setFont(new Font(30));
         gf.drawString("Statistiken", 50, 200);
-            
+
         gf.drawString("Erfahrungspunkte: "+exp+" EXP",50,240);
         gf.drawString("Geschaffte Levels: "+this.getNumberOfDoneLevels()+"/60 Levels",50,280);
         gf.drawString("LoC (Lines of Code): "+linesOfCode+" Zeilen",50,320);
-        
-        
+
         return gf;
     }
-    
+
     public GreenfootImage drawHelp(GreenfootImage gf,int command) {
         gf.setColor(new Color(255,255,255,255));
         gf.fill();
-        
-        
+
         
         drawCommand(gf,command);
-        
+
         /*
          * 
          * 
@@ -858,30 +1085,28 @@ public class Menu extends World
         this.buttons[4] = new MenuButton("LinksDrehen",this);
         this.buttons[5] = new MenuButton("RechtsDrehen",this);
         this.buttons[6] = new MenuButton("Färben",this);
-        
+
         this.buttons[7] = new MenuButton("Teile & Herrsche",this);
         this.buttons[8] = new MenuButton("Prozeduren",this);
         this.buttons[9] = new MenuButton("Syntax",this);
         this.buttons[10] = new MenuButton("Abfragen",this);
-        
+
         this.buttons[11] = new MenuButton("Checkpoint",this);
         this.buttons[12] = new MenuButton("Token",this);
         this.buttons[13] = new MenuButton("Zielscheibe",this);
         this.buttons[14] = new MenuButton("Markierung",this);
-    
-        
+
          * 
          * 
          */
 
-        
         return gf;
     }
-    
+
     public void drawCommand(GreenfootImage gf, int command) {
         gf.setColor(new Color(0,0,0,255));
         //gf.setFont(new Font("Arial", true, false, 25));
-        
+
         if (command == 0) {
             //Texte und Inhalt zu Hilfe
             gf.setFont(new Font(30));
@@ -890,7 +1115,7 @@ public class Menu extends World
             //Texte und Inhalte zur Befehlsliste
             gf.setFont(new Font(30));
             gf.drawString("Befehlsliste",20,40);
-            
+
             gf.setFont(new Font(20));
             if (progress[0] == true) {
                 gf.drawString("schritt();",60,120);
@@ -935,47 +1160,46 @@ public class Menu extends World
             //Texte und Inhalte zu Befehlen
             gf.setFont(new Font(30));
             gf.drawString("Befehle",20,40);
-            
+
             addCommandsButtons();
-            
-            
+
         } else if (command == 3) {
             //Texte und Inhalte zu Bedingungen
             gf.setFont(new Font(30));
             gf.drawString("Bedingungen",20,40);
-            
+
             addConditionsButtons();
         } else if (command == 4) {
             //Texte und Inhalte zu Bedingungen
             gf.setFont(new Font(30));
             gf.drawString("Syntax",20,40);
-            
+
             addSyntaxButtons();
         } else if (command == 5) {
             //Texte und Inhalte zu Bedingungen
             gf.setFont(new Font(30));
             gf.drawString("Konzepte",20,40);
-            
+
             addConceptButtons();
         } else if (command == 6) {
             //Texte und Inhalte zu Bedingungen
             gf.setFont(new Font(30));
             gf.drawString("Spielelemente",20,40);
-            
+
             addElementButtons();
         } else if (command == 7) {
             //Texte und Inhalte zu Bedingungen
             gf.setFont(new Font(30));
             gf.drawString("Allgemeines",20,40);
-            
+
             addGeneralButtons();
         }
-        
+
         else if (command == 200) {
             //Texte und Inhalte zu Schritt als Befehl
             gf.setFont(new Font(30));
             gf.drawString("Befehle",20,40);
-            
+
             gf.setColor(new Color(0,0,0,255));
             gf.setFont(new Font("Arial", true, false, 25));
             int x = 50;
@@ -985,26 +1209,25 @@ public class Menu extends World
             //Bild hinzufügen
             GreenfootImage s1 = new GreenfootImage("Schritt1-2.png");
             gf.drawImage(s1,x+225,y+25);
-            
+
             GreenfootImage s2 = new GreenfootImage("Schritt2.png");
             gf.drawImage(s2,x+375,y+25);
             GreenfootImage s3 = new GreenfootImage("Pfeil2.png");
             s3.scale(50, 50);
             gf.drawImage(s3,x+330,y+27);
-            
+
             gf.setFont(new Font(24));
             gf.drawString("Der Schritt-Befehl lässt die Spielfigur genau\nein Feld in Blickrichtung bewegen.",x+10,y+140);
             //Erklärung
-            
+
             gf.drawRect(x,y,200,100);
             gf.drawRect(x,y,500,200);
-            
-            
+
         } else if (command == 201) {
             //Texte und Inhalte zu Aufheben als Befehl
             gf.setFont(new Font(30));
             gf.drawString("Befehle",20,40);
-            
+
             gf.setColor(new Color(0,0,0,255));
             gf.setFont(new Font("Arial", true, false, 25));
             int x = 50;
@@ -1013,22 +1236,21 @@ public class Menu extends World
             gf.drawString("aufheben();",x+10,y+55);
             //Bild hinzufügen
             GreenfootImage s1 = new GreenfootImage("Token2.png");
-           
+
             gf.drawImage(s1,x+165,y+25);
-            
+
             GreenfootImage s2 = new GreenfootImage("Token3.PNG");
             gf.drawImage(s2,x+320,y+25);
             GreenfootImage s3 = new GreenfootImage("Pfeil2.png");
             s3.scale(50, 50);
             gf.drawImage(s3,x+270,y+27);
-            
+
             GreenfootImage s4 = new GreenfootImage("Token4.PNG");
             gf.drawImage(s4,x+425,y+25);
             GreenfootImage s5 = new GreenfootImage("Pfeil2.png");
             s5.scale(50, 50);
             gf.drawImage(s5,x+375,y+27);
-            
-            
+
             gf.setFont(new Font(24));
             gf.drawString("Der Aufheben-Befehl lässt die Spielfigur ein\nToken aufheben, wenn sich dieses genau\nunter ihr befindet.",x+10,y+140);
             gf.drawRect(x,y,150,100);
@@ -1037,7 +1259,7 @@ public class Menu extends World
             //Texte und Inhalte zu Schießen als Befehl
             gf.setFont(new Font(30));
             gf.drawString("Befehle",20,40);
-            
+
             gf.setColor(new Color(0,0,0,255));
             gf.setFont(new Font("Arial", true, false, 25));
             int x = 50;
@@ -1045,20 +1267,18 @@ public class Menu extends World
             gf.drawRect(x,y,500,100);
             gf.drawString("schießen();",x+10,y+55);
             //Bild hinzufügen
-            
-            
+
             GreenfootImage s2 = new GreenfootImage("Target2.PNG");
             s2.scale(140,50);
             gf.drawImage(s2,x+155,y+25);
             GreenfootImage s3 = new GreenfootImage("Pfeil2.png");
             s3.scale(50, 50);
             gf.drawImage(s3,x+295,y+27);
-            
+
             GreenfootImage s4 = new GreenfootImage("Target3.PNG");
             s4.scale(140,50);
             gf.drawImage(s4,x+345,y+25);
-            
-            
+
             gf.setFont(new Font(24));
             gf.drawString("Der Schießen-Befehl lässt deine Figur einen\nFarbkleks in die Blickrichtung schießen.\nDieser Farbklecks trifft stets das Feld,\nwelches sich genau zwei Felder vor ihr\nbefindet.\nDadurch kann man auch Zielscheiben treffen.",x+10,y+140);
             gf.drawRect(x,y,150,100);
@@ -1067,7 +1287,7 @@ public class Menu extends World
             //Texte und Inhalte zu LinksDrehen als Befehl
             gf.setFont(new Font(30));
             gf.drawString("Befehle",20,40);
-            
+
             gf.setColor(new Color(0,0,0,255));
             gf.setFont(new Font("Arial", true, false, 25));
             int x = 50;
@@ -1077,11 +1297,11 @@ public class Menu extends World
             //Bild hinzufügen
             GreenfootImage s1 = new GreenfootImage("Turn1-1.png");
             gf.drawImage(s1,x+260,y+25);
-            
+
             GreenfootImage s3 = new GreenfootImage("Pfeil2.png");
             s3.scale(50, 50);
             gf.drawImage(s3,x+320,y+27);
-            
+
             GreenfootImage s2 = new GreenfootImage("Turn2.PNG");
             gf.drawImage(s2,x+370,y+25);
             gf.setFont(new Font(24));
@@ -1089,10 +1309,10 @@ public class Menu extends World
             gf.drawRect(x,y,200,100);
             gf.drawRect(x,y,500,250);
         } else if (command == 204) {
-             //Texte und Inhalte zu RechtsDrehen als Befehl
+            //Texte und Inhalte zu RechtsDrehen als Befehl
             gf.setFont(new Font(30));
             gf.drawString("Befehle",20,40);
-            
+
             gf.setColor(new Color(0,0,0,255));
             gf.setFont(new Font("Arial", true, false, 25));
             int x = 50;
@@ -1102,11 +1322,11 @@ public class Menu extends World
             //Bild hinzufügen
             GreenfootImage s1 = new GreenfootImage("Turn1-2.png");
             gf.drawImage(s1,x+260,y+25);
-            
+
             GreenfootImage s3 = new GreenfootImage("Pfeil2.png");
             s3.scale(50, 50);
             gf.drawImage(s3,x+320,y+27);
-            
+
             GreenfootImage s2 = new GreenfootImage("Turn3.PNG");
             gf.drawImage(s2,x+370,y+25);
             gf.setFont(new Font(24));
@@ -1114,11 +1334,7 @@ public class Menu extends World
             gf.drawRect(x,y,200,100);
             gf.drawRect(x,y,500,250);
         }
-        
-        
-        
-        
-        
+
         
         
         
@@ -1126,227 +1342,221 @@ public class Menu extends World
             //Texte und Inhalte zu Programmierung als Konzept
             gf.setFont(new Font(30));
             gf.drawString("Konzepte",20,40);
-            
+
             gf.setFont(new Font(28));
             gf.drawString("Programmierung",180,120);
-            
+
             gf.setFont(new Font(25));
             gf.drawString("Unter Programmierung versteht man die gezielte\nSteuerung eines Gegenstandes zur Lösung von\nProblemen.\n\nUm einen solchen Gegenstand steuern zu können,\nmuss man sich erst in einer Sprache ausdrücken,\ndie dieser versteht.\nDiese Sprache wird als Programmiersprache\nbezeichnet und unterliegt strengen Regeln, auch\nSyntax genannt.\n\nIn unserem Beispiel möchten wir Kahla oder Farbi\nin ihrer Welt steuern. Dazu verwenden wir die\nProgrammiersprache 'Java-Kahla', welches eine\nUnterart der bekannten Programmiersprache\n'Java' ist.",20,170);
-            
-            
+
             
         } else if (command == 501) {
             //Texte und Inhalte zu Teile & Herrsche als Konzept
             gf.setFont(new Font(30));
             gf.drawString("Konzepte",20,40);
-            
+
             gf.setFont(new Font(28));
             gf.drawString("Teile & Herrsche",210,120);
-            
+
             gf.setFont(new Font(25));
             gf.drawString("Wenn ein umständliches oder großes Problem\nvorliegt, kann es sehr schwer sein, dieses auf\nAnhieb zu lösen.\nIn diesen Fällen eignet es sich sehr, mit einer\nanderen Vorgehensweise das Problem anzugehen.\nEine solche Vorgehensweise findet sich mit dem\nKonzept 'Teile & Herrsche'\n(Divide et impera oder Divide and Conquer).\n\nVom Prinzip her verläuft die Lösung eines großen\nProblems dabei in drei Schritten:\n1. Teile das Problem in möglichst viele kleine\nTeilprobleme auf.\n2. Löse diese Teilprobleme.\n3. Kombiniere diese Teillösungen zu einer\nGesamtlösung.",20,170);
-            
-            
+
             
         }
         /*
-        
-        
+
        
         } else if (command == 6) {
-            
+
         } else if (command == 8) {
-            //Befehlssyntax.
+        //Befehlssyntax.
 
-            if (progress[21] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,150);
-                GreenfootImage s1 = new GreenfootImage("UI/A07/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Befehle:",x+10,y+210);
-                
-                gf.drawRect(x-20,y+220,540,320);
-                GreenfootImage s2 = new GreenfootImage("UI/A07/Befehl.png");
-                gf.drawImage(s2,x,y+230);
-            } else if (progress[11] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,100);
-                GreenfootImage s1 = new GreenfootImage("UI/A06/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Befehle:",x+10,y+160);
-                
-                gf.drawRect(x-20,y+170,540,320);
-                GreenfootImage s2 = new GreenfootImage("UI/A06/Befehl.png");
-                gf.drawImage(s2,x,y+180);
-            } else if (progress[10] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,100);
-                GreenfootImage s1 = new GreenfootImage("UI/A05/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Befehle:",x+10,y+160);
-                
-                gf.drawRect(x-20,y+170,540,270);
-                GreenfootImage s2 = new GreenfootImage("UI/A05/Befehl.png");
-                gf.drawImage(s2,x,y+180);
-            } else if (progress[4] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,100);
-                GreenfootImage s1 = new GreenfootImage("UI/A04/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Befehle:",x+10,y+160);
-                
-                gf.drawRect(x-20,y+170,540,230);
-                GreenfootImage s2 = new GreenfootImage("UI/A04/Befehl.png");
-                gf.drawImage(s2,x,y+180);
-            } else if (progress[3] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,100);
-                GreenfootImage s1 = new GreenfootImage("UI/A03/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Befehle:",x+10,y+160);
-                
-                gf.drawRect(x-20,y+170,540,140);
-                GreenfootImage s2 = new GreenfootImage("UI/A03/Befehl.png");
-                gf.drawImage(s2,x,y+180);
-            } else if (progress[2] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,100);
-                GreenfootImage s1 = new GreenfootImage("UI/A02/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Befehle:",x+10,y+160);
-                
-                gf.drawRect(x-20,y+170,540,100);
-                GreenfootImage s2 = new GreenfootImage("UI/A02/Befehl.png");
-                gf.drawImage(s2,x,y+180);
-            } else if (progress[0] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                gf.drawRect(x-20,y+20,540,100);
-                GreenfootImage s1 = new GreenfootImage("UI/A01/Programm.png");
-                gf.drawImage(s1,x,y+30);
-            }
-        } else if (command == 9) {
-            //Prozedursyntax.
+        if (progress[21] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
 
-            if (progress[21] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,150);
-                GreenfootImage s1 = new GreenfootImage("UI/A07/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Prozedur:",x+10,y+210);
-                
-                gf.drawRect(x-20,y+220,540,150);
-                GreenfootImage s2 = new GreenfootImage("UI/A07/Prozedur.png");
-                gf.drawImage(s2,x,y+230);
-                
-                gf.setFont(new Font(24));
-                gf.drawString("public void prozedurName() {\n//Hier steht, was dein Befehl machen soll.\n}",30,500);
-            } else if (progress[11] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,100);
-                GreenfootImage s1 = new GreenfootImage("UI/A06/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Prozedur:",x+10,y+160);
-                
-                gf.drawRect(x-20,y+170,540,100);
-                GreenfootImage s2 = new GreenfootImage("UI/A06/Prozedur.png");
-                gf.drawImage(s2,x,y+180);
-                gf.setFont(new Font(24));
-                gf.drawString("public void prozedurName() {\n//Hier steht, was dein Befehl machen soll.\n}",30,500);
-            }
-        } else if (command == 10) {
-            //Abfragensyntax.
-            
-            if (progress[24] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,150);
-                GreenfootImage s1 = new GreenfootImage("UI/A10/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Abfrage:",x+10,y+210);
-                
-                gf.drawRect(x-20,y+220,540,160);
-                GreenfootImage s2 = new GreenfootImage("UI/A10/Abfrage.png");
-                gf.drawImage(s2,x,y+230);
-                
-                gf.drawString("Alternative:",x+10,y+410);
-                
-                gf.drawRect(x-20,y+430,540,200);
-                GreenfootImage s3 = new GreenfootImage("UI/A10/Alternative.png");
-                gf.drawImage(s3,x,y+440);
-                
-                
-            } else if (progress[23] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,150);
-                GreenfootImage s1 = new GreenfootImage("UI/A09/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Abfrage:",x+10,y+210);
-                
-                gf.drawRect(x-20,y+220,540,150);
-                GreenfootImage s2 = new GreenfootImage("UI/A09/Abfrage.png");
-                gf.drawImage(s2,x,y+230);
-                
-                gf.drawString("Bedingung:",x+10,y+410);
-                
-                gf.drawRect(x-20,y+430,540,150);
-                GreenfootImage s3 = new GreenfootImage("UI/A09/Bedingung.png");
-                gf.drawImage(s3,x,y+440);
-                
-                
-            } else if (progress[22] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,150);
-                GreenfootImage s1 = new GreenfootImage("UI/A08/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Abfrage:",x+10,y+210);
-                
-                gf.drawRect(x-20,y+220,540,150);
-                GreenfootImage s2 = new GreenfootImage("UI/A08/Abfrage.png");
-                gf.drawImage(s2,x,y+230);
-                
-                gf.drawString("Bedingung:",x+10,y+410);
-                
-                gf.drawRect(x-20,y+430,540,100);
-                GreenfootImage s3 = new GreenfootImage("UI/A08/Bedingung.png");
-                gf.drawImage(s3,x,y+440);
-                
-                
-            } else if (progress[21] == true) {
-                gf.drawString("Syntax:",x+10,y+10);
-                
-                gf.drawRect(x-20,y+20,540,150);
-                GreenfootImage s1 = new GreenfootImage("UI/A07/Programm.png");
-                gf.drawImage(s1,x,y+30);
-                
-                gf.drawString("Abfrage:",x+10,y+210);
-                
-                gf.drawRect(x-20,y+220,540,150);
-                GreenfootImage s2 = new GreenfootImage("UI/A07/Abfrage.png");
-                gf.drawImage(s2,x,y+230);
-            }
+        gf.drawRect(x-20,y+20,540,150);
+        GreenfootImage s1 = new GreenfootImage("UI/A07/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Befehle:",x+10,y+210);
+
+        gf.drawRect(x-20,y+220,540,320);
+        GreenfootImage s2 = new GreenfootImage("UI/A07/Befehl.png");
+        gf.drawImage(s2,x,y+230);
+        } else if (progress[11] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,100);
+        GreenfootImage s1 = new GreenfootImage("UI/A06/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Befehle:",x+10,y+160);
+
+        gf.drawRect(x-20,y+170,540,320);
+        GreenfootImage s2 = new GreenfootImage("UI/A06/Befehl.png");
+        gf.drawImage(s2,x,y+180);
+        } else if (progress[10] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,100);
+        GreenfootImage s1 = new GreenfootImage("UI/A05/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Befehle:",x+10,y+160);
+
+        gf.drawRect(x-20,y+170,540,270);
+        GreenfootImage s2 = new GreenfootImage("UI/A05/Befehl.png");
+        gf.drawImage(s2,x,y+180);
+        } else if (progress[4] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,100);
+        GreenfootImage s1 = new GreenfootImage("UI/A04/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Befehle:",x+10,y+160);
+
+        gf.drawRect(x-20,y+170,540,230);
+        GreenfootImage s2 = new GreenfootImage("UI/A04/Befehl.png");
+        gf.drawImage(s2,x,y+180);
+        } else if (progress[3] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,100);
+        GreenfootImage s1 = new GreenfootImage("UI/A03/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Befehle:",x+10,y+160);
+
+        gf.drawRect(x-20,y+170,540,140);
+        GreenfootImage s2 = new GreenfootImage("UI/A03/Befehl.png");
+        gf.drawImage(s2,x,y+180);
+        } else if (progress[2] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,100);
+        GreenfootImage s1 = new GreenfootImage("UI/A02/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Befehle:",x+10,y+160);
+
+        gf.drawRect(x-20,y+170,540,100);
+        GreenfootImage s2 = new GreenfootImage("UI/A02/Befehl.png");
+        gf.drawImage(s2,x,y+180);
+        } else if (progress[0] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+        gf.drawRect(x-20,y+20,540,100);
+        GreenfootImage s1 = new GreenfootImage("UI/A01/Programm.png");
+        gf.drawImage(s1,x,y+30);
         }
-        */
+        } else if (command == 9) {
+        //Prozedursyntax.
+
+        if (progress[21] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,150);
+        GreenfootImage s1 = new GreenfootImage("UI/A07/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Prozedur:",x+10,y+210);
+
+        gf.drawRect(x-20,y+220,540,150);
+        GreenfootImage s2 = new GreenfootImage("UI/A07/Prozedur.png");
+        gf.drawImage(s2,x,y+230);
+
+        gf.setFont(new Font(24));
+        gf.drawString("public void prozedurName() {\n//Hier steht, was dein Befehl machen soll.\n}",30,500);
+        } else if (progress[11] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,100);
+        GreenfootImage s1 = new GreenfootImage("UI/A06/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Prozedur:",x+10,y+160);
+
+        gf.drawRect(x-20,y+170,540,100);
+        GreenfootImage s2 = new GreenfootImage("UI/A06/Prozedur.png");
+        gf.drawImage(s2,x,y+180);
+        gf.setFont(new Font(24));
+        gf.drawString("public void prozedurName() {\n//Hier steht, was dein Befehl machen soll.\n}",30,500);
+        }
+        } else if (command == 10) {
+        //Abfragensyntax.
+
+        if (progress[24] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,150);
+        GreenfootImage s1 = new GreenfootImage("UI/A10/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Abfrage:",x+10,y+210);
+
+        gf.drawRect(x-20,y+220,540,160);
+        GreenfootImage s2 = new GreenfootImage("UI/A10/Abfrage.png");
+        gf.drawImage(s2,x,y+230);
+
+        gf.drawString("Alternative:",x+10,y+410);
+
+        gf.drawRect(x-20,y+430,540,200);
+        GreenfootImage s3 = new GreenfootImage("UI/A10/Alternative.png");
+        gf.drawImage(s3,x,y+440);
+
+        } else if (progress[23] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,150);
+        GreenfootImage s1 = new GreenfootImage("UI/A09/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Abfrage:",x+10,y+210);
+
+        gf.drawRect(x-20,y+220,540,150);
+        GreenfootImage s2 = new GreenfootImage("UI/A09/Abfrage.png");
+        gf.drawImage(s2,x,y+230);
+
+        gf.drawString("Bedingung:",x+10,y+410);
+
+        gf.drawRect(x-20,y+430,540,150);
+        GreenfootImage s3 = new GreenfootImage("UI/A09/Bedingung.png");
+        gf.drawImage(s3,x,y+440);
+
+        } else if (progress[22] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,150);
+        GreenfootImage s1 = new GreenfootImage("UI/A08/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Abfrage:",x+10,y+210);
+
+        gf.drawRect(x-20,y+220,540,150);
+        GreenfootImage s2 = new GreenfootImage("UI/A08/Abfrage.png");
+        gf.drawImage(s2,x,y+230);
+
+        gf.drawString("Bedingung:",x+10,y+410);
+
+        gf.drawRect(x-20,y+430,540,100);
+        GreenfootImage s3 = new GreenfootImage("UI/A08/Bedingung.png");
+        gf.drawImage(s3,x,y+440);
+
+        } else if (progress[21] == true) {
+        gf.drawString("Syntax:",x+10,y+10);
+
+        gf.drawRect(x-20,y+20,540,150);
+        GreenfootImage s1 = new GreenfootImage("UI/A07/Programm.png");
+        gf.drawImage(s1,x,y+30);
+
+        gf.drawString("Abfrage:",x+10,y+210);
+
+        gf.drawRect(x-20,y+220,540,150);
+        GreenfootImage s2 = new GreenfootImage("UI/A07/Abfrage.png");
+        gf.drawImage(s2,x,y+230);
+        }
+        }
+         */
         /*
          * 
          * this.buttons[0] = new MenuButton("Back",this);
@@ -1356,33 +1566,29 @@ public class Menu extends World
         this.buttons[4] = new MenuButton("LinksDrehen",this);
         this.buttons[5] = new MenuButton("RechtsDrehen",this);
         this.buttons[6] = new MenuButton("Färben",this);
-        
+
         this.buttons[7] = new MenuButton("Teile & Herrsche",this);
         this.buttons[8] = new MenuButton("Prozeduren",this);
         this.buttons[9] = new MenuButton("Syntax",this);
         this.buttons[10] = new MenuButton("Abfragen",this);
-        
+
         this.buttons[11] = new MenuButton("Checkpoint",this);
         this.buttons[12] = new MenuButton("Token",this);
         this.buttons[13] = new MenuButton("Zielscheibe",this);
         this.buttons[14] = new MenuButton("Markierung",this);
-    
-        
+
          * 
          * 
          */
-        
-        
+
     }
-    
     public void addHelpButtons() {
-       
         if (this.isOnCommand == true) {
             this.buttons[0] = new MenuButton(" Back ",this);
         } else {
             this.buttons[0] = new MenuButton("Back",this);
         }
-        
+
         this.buttons[1] = new MenuButton("Befehlsliste",this);
         this.buttons[2] = new MenuButton("Befehle",this);
         this.buttons[3] = new MenuButton("Bedingungen",this);
@@ -1391,7 +1597,6 @@ public class Menu extends World
         this.buttons[6] = new MenuButton("Spielelemente",this);
         this.buttons[7] = new MenuButton("Allgemeines",this);
 
-        
         this.addObject(this.buttons[0],500,750);
         this.addObject(this.buttons[1],200,100);
         this.addObject(this.buttons[2],200,150);
@@ -1400,53 +1605,50 @@ public class Menu extends World
         this.addObject(this.buttons[5],200,300);
         this.addObject(this.buttons[6],200,350);
         this.addObject(this.buttons[7],200,400);
-        
-     
+
         this.buttons[15] = new MenuButton("Lösungen",this,"Main");
         this.addObject(this.buttons[15],200,750);
-                        
+
     }
-    
-    
+
     
     public void addLevelOneButtons() {
-        
+
         this.buttons[0] = new MenuButton("Hilfe",this);
         this.addObject(this.buttons[0],300,750);
 
     }
-    
+
     public void addLevelTwoButtonsToCommand() {
         this.buttons[0] = new MenuButton("Befehle",this);
         this.addObject(this.buttons[0],300,750);
     }
-    
+
     public void addLevelTwoButtonsToCondition() {
         this.buttons[0] = new MenuButton("Bedingungen",this);
         this.addObject(this.buttons[0],300,750);
     }
-    
+
     public void addLevelTwoButtonsToSyntax() {
         this.buttons[0] = new MenuButton("Syntax",this);
         this.addObject(this.buttons[0],300,750);
     }
-    
+
     public void addLevelTwoButtonsToConcept() {
         this.buttons[0] = new MenuButton("Konzepte",this);
         this.addObject(this.buttons[0],300,750);
     }
-    
+
     public void addLevelTwoButtonsToElement() {
         this.buttons[0] = new MenuButton("Spielelemente",this);
         this.addObject(this.buttons[0],300,750);
     }
-    
+
     public void addLevelTwoButtonsToGeneral() {
         this.buttons[0] = new MenuButton("Allgemeines",this);
         this.addObject(this.buttons[0],300,750);
     }
-    
-    
+
     public void addCommandsButtons() {
         this.buttons[1] = new MenuButton("Schritt",this);
         this.buttons[2] = new MenuButton("Aufheben",this);
@@ -1456,7 +1658,7 @@ public class Menu extends World
         this.buttons[6] = new MenuButton("Färben",this);
         this.buttons[7] = new MenuButton("Nehmen",this);
         this.buttons[8] = new MenuButton("Hinlegen",this);
-        
+
         this.addObject(this.buttons[1],200,100);
         this.addObject(this.buttons[2],200,150);
         this.addObject(this.buttons[3],200,200);
@@ -1466,7 +1668,7 @@ public class Menu extends World
         this.addObject(this.buttons[7],200,400);
         this.addObject(this.buttons[8],200,450);
     }
-    
+
     public void addConditionsButtons() {
         this.buttons[1] = new MenuButton("SiehtCheckpoint",this);
         this.buttons[2] = new MenuButton("IstAufToken",this);
@@ -1475,7 +1677,7 @@ public class Menu extends World
         this.buttons[5] = new MenuButton("IstVorWand",this);
         this.buttons[6] = new MenuButton("IstVorKugel",this);
         this.buttons[7] = new MenuButton("HatKugel",this);
-        
+
         this.addObject(this.buttons[1],200,100);
         this.addObject(this.buttons[2],200,150);
         this.addObject(this.buttons[3],200,200);
@@ -1484,7 +1686,7 @@ public class Menu extends World
         this.addObject(this.buttons[6],200,350);
         this.addObject(this.buttons[7],200,400);
     }
-    
+
     public void addSyntaxButtons() {
         this.buttons[1] = new MenuButton("Lesehinweise",this);
         this.buttons[2] = new MenuButton("Programm",this);
@@ -1493,7 +1695,6 @@ public class Menu extends World
         this.buttons[5] = new MenuButton("Schleifen",this,"Syntax");
         this.buttons[6] = new MenuButton("Boolsche Funktionen",this,"Syntax");
 
-        
         this.addObject(this.buttons[1],200,100);
         this.addObject(this.buttons[2],200,150);
         this.addObject(this.buttons[3],200,200);
@@ -1501,7 +1702,7 @@ public class Menu extends World
         this.addObject(this.buttons[5],200,300);
         this.addObject(this.buttons[6],200,350);
     }
-    
+
     public void addConceptButtons() {
         this.buttons[1] = new MenuButton("Programmierung",this);
         this.buttons[2] = new MenuButton("Teile & Herrsche",this);
@@ -1515,7 +1716,6 @@ public class Menu extends World
         this.buttons[10] = new MenuButton("Endlosschleifen",this);
         this.buttons[11] = new MenuButton("Boolsche Verknüpfungen",this);
 
-        
         this.addObject(this.buttons[1],200,100);
         this.addObject(this.buttons[2],200,150);
         this.addObject(this.buttons[3],200,200);
@@ -1528,7 +1728,7 @@ public class Menu extends World
         this.addObject(this.buttons[10],200,550);
         this.addObject(this.buttons[11],200,600);
     }
-    
+
     public void addElementButtons() {
         this.buttons[1] = new MenuButton("Welt",this);
         this.buttons[2] = new MenuButton("Spielfigur",this);
@@ -1540,7 +1740,6 @@ public class Menu extends World
         this.buttons[8] = new MenuButton("Multi-Levels",this);
         this.buttons[9] = new MenuButton("Kugel",this);
         this.buttons[10] = new MenuButton("Plattform",this);
-
 
         
         this.addObject(this.buttons[1],200,100);
@@ -1554,31 +1753,31 @@ public class Menu extends World
         this.addObject(this.buttons[9],200,500);
         this.addObject(this.buttons[10],200,550);
     }
-    
+
     public void addGeneralButtons() {
         this.buttons[1] = new MenuButton("Ändern der Spielfigur",this);
         this.buttons[2] = new MenuButton("Erfahrungspunkte",this);
         this.buttons[3] = new MenuButton("Lines of Code",this);
         this.buttons[4] = new MenuButton("Levelbewertung",this);
         this.buttons[5] = new MenuButton("Lösungen",this,"General");
-        
-        
+
         this.addObject(this.buttons[1],200,100);
         this.addObject(this.buttons[2],200,150);
         this.addObject(this.buttons[3],200,200);
         this.addObject(this.buttons[4],200,250);
         this.addObject(this.buttons[5],200,300);
-        
+
     }
-    
+
     public boolean checkChapterProgress(int chapter) {
         return (progress[(chapter-1)*10+0] && progress[(chapter-1)*10+1] && progress[(chapter-1)*10+2] && progress[(chapter-1)*10+3] && progress[(chapter-1)*10 +4] && progress[(chapter-1)*10+5] && progress[(chapter-1)*10+6] && progress[(chapter-1)*10+7] && progress[(chapter-1)*10+8] && progress[(chapter-1)*10+9]);
     }
+
     /**
      * Designs the chapter Menu and equips it with the correct buttons.
      */
     public void addChapterImage() {
-        
+
         if (checkChapterProgress(1)) {
             ChapterButton cb1 = new ChapterButton("Kapitel 1 ★",this);
             this.cbuttons.add(cb1);
@@ -1588,7 +1787,7 @@ public class Menu extends World
             this.cbuttons.add(cb1);
             this.addObject(cb1, 300, 150);
         }
-        
+
         if (checkChapterProgress(2)) {
             ChapterButton cb2 = new ChapterButton("Kapitel 2 ★",this);
             this.cbuttons.add(cb2);
@@ -1598,7 +1797,7 @@ public class Menu extends World
             this.cbuttons.add(cb2);
             this.addObject(cb2, 300, 250);
         }
-        
+
         if (checkChapterProgress(3)) {
             ChapterButton cb3 = new ChapterButton("Kapitel 3 ★",this);
             this.cbuttons.add(cb3);
@@ -1608,7 +1807,7 @@ public class Menu extends World
             this.cbuttons.add(cb3);
             this.addObject(cb3, 300, 350);
         }
-        
+
         if (checkChapterProgress(4)) {
             ChapterButton cb4 = new ChapterButton("Kapitel 4 ★",this);
             this.cbuttons.add(cb4);
@@ -1618,7 +1817,7 @@ public class Menu extends World
             this.cbuttons.add(cb4);
             this.addObject(cb4, 300, 450);
         }
-        
+
         if (checkChapterProgress(5)) {
             ChapterButton cb5 = new ChapterButton("Kapitel 5 ★",this);
             this.cbuttons.add(cb5);
@@ -1628,7 +1827,7 @@ public class Menu extends World
             this.cbuttons.add(cb5);
             this.addObject(cb5, 300, 550);
         }
-        
+
         if (checkChapterProgress(6)) {
             ChapterButton cb6 = new ChapterButton("Kapitel 6 ★",this);
             this.cbuttons.add(cb6);
@@ -1639,42 +1838,42 @@ public class Menu extends World
             this.addObject(cb6, 300, 650);
         } 
     }
-    
+
     /**
      * Loads the progress from a file.
      * Has information about every finished stage.
      */
     public boolean[] loadState() {
         boolean[] progress = new boolean[60];
-        
+
         String txt = "";
         try {
-           BufferedReader in = new BufferedReader(new FileReader("data/state.txt"));
-           int i = 0;
-           try {
-               for (String x = in.readLine(); x != null; x = in.readLine()) {
-                   if (x.contains("y")) {
-                       progress[i] = true;    
-                   } else if (x.contains("n")) {
-                       progress[i] = false;
-                   }
-                   i++;
-               }
-           } catch(IOException e) {
-               for (int j = 0; j < 60; j++) {
-                   progress[j] = false;
-               }
-           }
-           
+            BufferedReader in = new BufferedReader(new FileReader("data/state.txt"));
+            int i = 0;
+            try {
+                for (String x = in.readLine(); x != null; x = in.readLine()) {
+                    if (x.contains("y")) {
+                        progress[i] = true;    
+                    } else if (x.contains("n")) {
+                        progress[i] = false;
+                    }
+                    i++;
+                }
+            } catch(IOException e) {
+                for (int j = 0; j < 60; j++) {
+                    progress[j] = false;
+                }
+            }
+
         } catch (FileNotFoundException e) {
             for (int j = 0; j < 60; j++) {
-                   progress[j] = false;
+                progress[j] = false;
             }
         }
-        
+
         return progress;
     }
-    
+
     /**
      * Keeps information, which levels are locked under circumstances.
      */
@@ -1701,7 +1900,7 @@ public class Menu extends World
                 if (progress[4]) {
                     return false;
                 }
-                
+
             }
         } else if (chapter == 2) {
             //Tutorial-Conditions
@@ -1803,23 +2002,23 @@ public class Menu extends World
             if (level == 10 && progress[58]) {
                 return false;
             }
-            
+
         }
         return true;
     }
-    
+
     /**
      * Returns a statement, whether a certain level has been completed.
      */
     private boolean getDone(int chapter, int level) {
         return this.progress[(chapter-1)*10+(level-1)];
     }
-    
+
     /**
      * Calculates the EXP, based on the current progress.
      */
     private int getExp(boolean[] progress) {
-        
+
         int exp = 0;
         if (progress[0] == true) {
             exp += 10;
@@ -2001,15 +2200,15 @@ public class Menu extends World
         if (progress[59] == true) {
             exp += 30;
         }
-        
+
         return exp;
     }
-    
+
     /**
      * Adds Level Buttons, based on the chapter, that the user can use to access a certain level.
      */
     public void addLevelImage(int chapter) {
-        
+
         LevelButton lb1 = new LevelButton("C0"+chapter+"L01",this.getDone(chapter,1),this.getLocked(chapter,1),this.loc[chapter-1][0]);
         LevelButton lb2 = new LevelButton("C0"+chapter+"L02",this.getDone(chapter,2),this.getLocked(chapter,2),this.loc[chapter-1][1]);
         LevelButton lb3 = new LevelButton("C0"+chapter+"L03",this.getDone(chapter,3),this.getLocked(chapter,3),this.loc[chapter-1][2]);
@@ -2020,8 +2219,7 @@ public class Menu extends World
         LevelButton lb8 = new LevelButton("C0"+chapter+"L08",this.getDone(chapter,8),this.getLocked(chapter,8),this.loc[chapter-1][7]);
         LevelButton lb9 = new LevelButton("C0"+chapter+"L09",this.getDone(chapter,9),this.getLocked(chapter,9),this.loc[chapter-1][8]);
         LevelButton lb10 = new LevelButton("C0"+chapter+"L10",this.getDone(chapter,10),this.getLocked(chapter,10),this.loc[chapter-1][9]);
-        
-        
+
         this.lbuttons.add(lb1);
         this.addObject(lb1,100,120);
         this.lbuttons.add(lb2);
@@ -2043,16 +2241,14 @@ public class Menu extends World
         this.lbuttons.add(lb10);
         this.addObject(lb10,100,720);
 
-        
     }
-    
     /**
      * Changes the current mode.
      */
     public void setMode(String s) {
         this.mode = s;
     }
-    
+
     /**
      * Adds Main Menu buttons for traversion.
      */
@@ -2062,7 +2258,6 @@ public class Menu extends World
         this.buttons[2] = new MenuButton("Hilfe",this);
         this.buttons[3] = new MenuButton("Optionen",this);
         this.buttons[4] = new MenuButton("Statistiken",this);
-        
 
 
         this.addObject(this.buttons[0], 300, 500);
@@ -2072,7 +2267,7 @@ public class Menu extends World
         this.addObject(this.buttons[4], 300, 700);
 
     }
-    
+
     /**
      * Adds a Back-Button to get back to the Chapter-Menu from the Level Selection.
      */
@@ -2080,7 +2275,7 @@ public class Menu extends World
         this.buttons[0] = new MenuButton("Levelauswahl",this);
         this.addObject(this.buttons[0],400,750);
     }
-    
+
     /**
      * Adds a Back-Button to get back to the Main Menu.
      */
@@ -2088,7 +2283,7 @@ public class Menu extends World
         this.buttons[0] = new MenuButton("Optionen",this);
         this.addObject(this.buttons[0],300,750);
     }
-    
+
     public void addOptionsButtons() {
         this.buttons[0] = new MenuButton("Back",this);
         this.addObject(this.buttons[0],500,750);
@@ -2098,15 +2293,15 @@ public class Menu extends World
         this.addObject(this.buttons[2],300,140);
         this.buttons[3] = new MenuButton("Zurücksetzen",this);
         this.addObject(this.buttons[3],200,250);
-        
+
         this.buttons[4] = new MenuButton("Credits",this);
         this.addObject(this.buttons[4],200,750);
-        
+
         this.buttons[5] = new MenuButton("Lösungen",this,"Main");
         this.addObject(this.buttons[5],200,360);
-        
+
     }
-    
+
     public void addOthersButtons() {
         this.buttons[0] = new MenuButton("Back",this);
         this.addObject(this.buttons[0],500,750);
@@ -2114,24 +2309,22 @@ public class Menu extends World
         this.addObject(this.buttons[1],200,100);
         this.buttons[2] = new MenuButton("Level-Editor", this);
         this.addObject(this.buttons[2],200,150);
-        
+
         this.buttons[3] = new MenuButton("Multiplayer", this);
         this.addObject(this.buttons[3],200,200);
-       
+
     }
-    
-    
+
     /**
      * Addas a Back-Button to get back to the Main Menu.
      */
     public void addChapterMenuButtons() {
         //Diverse Buttons für die Einzelnen Kapitel
-        
+
         this.buttons[0] = new MenuButton("Back",this);
         this.addObject(this.buttons[0],500,750);
     }
-    
-    
+
     /**
      * Adds a Back-Button to get back to the Main Menu.
      */
@@ -2139,7 +2332,7 @@ public class Menu extends World
         this.buttons[0] = new MenuButton("Back",this);
         this.addObject(this.buttons[0],500,750);
     }
-    
+
     public void act() {
         if (this.firstAct) {
             if ((this.name.equals("") || this.name == null)) {
@@ -2148,7 +2341,7 @@ public class Menu extends World
             }
             this.firstAct = false;
         }
-        
+
     }
 
 }

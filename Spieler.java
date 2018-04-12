@@ -15,7 +15,6 @@ public class Spieler extends Player implements Serializable
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
 
-   
     public Spieler() {
         super();
     }
@@ -34,7 +33,9 @@ public class Spieler extends Player implements Serializable
 
     public void code() {
         //Unter dieser Zeile sollen deine Befehle stehen
-        schritt();
+        if (siehtCheckpoint()) {
+            schritt();
+        }
         //Über dieser Zeile sollen deine Befehle stehen
     }
 }
